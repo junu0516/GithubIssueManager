@@ -7,6 +7,7 @@ class LoginCoordinator: Coordinator {
 
     required init() {
         self.navigationController = UINavigationController()
+        self.navigationController?.view.backgroundColor = .systemBackground
     }
 
     func start() {
