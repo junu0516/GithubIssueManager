@@ -8,6 +8,7 @@ final class AppCoordinator: Coordinator {
     required init() {}
     
     func start() {
+        moveToFirstView(type: LoginCoordinator.self)
     }
     
     private func moveToFirstView<T: Coordinator>(type: T.Type) {
