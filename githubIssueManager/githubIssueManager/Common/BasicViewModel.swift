@@ -7,3 +7,4 @@ protocol BasicViewModel {
     var input: Input { get }
     var output: Output { get}
 }
+
