@@ -22,8 +22,10 @@
 		B53CFC96285C5A2200C81EE3 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC95285C5A2200C81EE3 /* LoginCoordinator.swift */; };
 		B53CFC99285C620100C81EE3 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC98285C620100C81EE3 /* Logger.swift */; };
 		B53CFC9B285C6CEE00C81EE3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC9A285C6CEE00C81EE3 /* LoginViewModel.swift */; };
+		B53CFC9D285C6F1400C81EE3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC9C285C6F1400C81EE3 /* NetworkManager.swift */; };
 		B53CFCA1285C757A00C81EE3 /* BasicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */; };
 		B53CFCA6285D815900C81EE3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA5285D815900C81EE3 /* Observable.swift */; };
+		B53CFCA8285D848E00C81EE3 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA7285D848E00C81EE3 /* LoginRepository.swift */; };
 		EEC8393A7CC1C82330BDB5A3 /* Pods_githubIssueManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2461462E42448731A820A9A1 /* Pods_githubIssueManagerTests.framework */; };
 		FEF82E538C6374486E2E9642 /* Pods_githubIssueManager_githubIssueManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -72,8 +74,10 @@
 		B53CFC95285C5A2200C81EE3 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		B53CFC98285C620100C81EE3 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		B53CFC9A285C6CEE00C81EE3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B53CFC9C285C6F1400C81EE3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewModel.swift; sourceTree = "<group>"; };
 		B53CFCA5285D815900C81EE3 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		B53CFCA7285D848E00C81EE3 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubIssueManager_githubIssueManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -140,6 +144,7 @@
 		B53CFC5B285C23FB00C81EE3 /* githubIssueManager */ = {
 			isa = PBXGroup;
 			children = (
+				B53CFC9E285C6F1E00C81EE3 /* Network */,
 				B53CFC97285C61F700C81EE3 /* Common */,
 				B53CFC8E285C496200C81EE3 /* Coordinator */,
 				B53CFC8D285C47D500C81EE3 /* LogIn */,
@@ -184,6 +189,7 @@
 				B53CFC60285C23FB00C81EE3 /* LoginViewController.swift */,
 				B53CFC95285C5A2200C81EE3 /* LoginCoordinator.swift */,
 				B53CFC9A285C6CEE00C81EE3 /* LoginViewModel.swift */,
+				B53CFCA7285D848E00C81EE3 /* LoginRepository.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -200,11 +206,20 @@
 		B53CFC97285C61F700C81EE3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B53CFCA2285C789700C81EE3 /* Extensions */,
 				B53CFC98285C620100C81EE3 /* Logger.swift */,
 				B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */,
 				B53CFCA5285D815900C81EE3 /* Observable.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		B53CFC9E285C6F1E00C81EE3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B53CFC9C285C6F1400C81EE3 /* NetworkManager.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		F8F8C31DF8B7A9379609A2C5 /* Pods */ = {
@@ -459,7 +474,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				B53CFCA6285D815900C81EE3 /* Observable.swift in Sources */,
+				B53CFC9D285C6F1400C81EE3 /* NetworkManager.swift in Sources */,
 				B53CFC92285C49B300C81EE3 /* Coordinator.swift in Sources */,
+				B53CFCA8285D848E00C81EE3 /* LoginRepository.swift in Sources */,
 				B53CFC61285C23FB00C81EE3 /* LoginViewController.swift in Sources */,
 				B53CFC96285C5A2200C81EE3 /* LoginCoordinator.swift in Sources */,
 				B53CFC5D285C23FB00C81EE3 /* AppDelegate.swift in Sources */,
