@@ -33,8 +33,10 @@ final class LoginViewController: UIViewController {
             self?.viewModel?.input.loginButtonTapped.value = true
         }
         
-        viewModel?.output.loginRequested.bind { _ in
-            Log.debug("login requested")
+        viewModel?.output.loginRequested.bind { [weak self] isRequested in
+            guard isRequested == true else { return }
+            guard let url = self?.viewModel?.loginUrl else { return }
+            UIApplication.shared.open(url)
         }
     }
 
