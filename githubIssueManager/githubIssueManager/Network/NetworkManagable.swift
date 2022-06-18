@@ -1,5 +1,6 @@
 import Foundation
 
 protocol NetworkManagable {
-    func request(target: NetworkTarget, body: Data?, completion: @escaping (Result<Data, Error>) -> Void)
+    
+    func request<T:Encodable>(target: NetworkTarget, body: T?, completion: @escaping (Result<Data, Error>) -> Void)
 }

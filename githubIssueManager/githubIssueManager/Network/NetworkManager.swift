@@ -3,14 +3,14 @@ import Alamofire
 
 struct NetworkManager: NetworkManagable {
     
-    func request(target: NetworkTarget, body: Data?, completion: @escaping (Result<Data, Error>) -> Void) {
-        
-        guard var request = try? URLRequest(url: target.url,
-                                            method: HTTPMethod(rawValue: "\(target.method)"),
-                                            headers: HTTPHeaders(target.headers)) else { return }
-        request.httpBody = body
-        
-        AF.request(request)
+    private let encoder = JSONEncoder()
+    
+    func request<T:Encodable>(target: NetworkTarget, body: T?, completion: @escaping (Result<Data, Error>) -> Void) {
+
+        AF.request(target.url,
+                   method: HTTPMethod(rawValue: "\(target.method)"),
+                   parameters: body,
+                   headers: HTTPHeaders(target.headers))
         .validate(statusCode: 200..<300)
         .responseData { response in
             switch response.result {
