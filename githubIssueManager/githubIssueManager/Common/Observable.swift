@@ -5,18 +5,24 @@ final class Observable<T> {
     
     private var listener: Listener?
     
-    var value: T {
+    var value: T? {
         didSet {
-            listener?(value)
+            if let value = self.value {
+                listener?(value)
+            }
         }
     }
+    
+    init() { }
     
     init(_ value: T) {
         self.value = value
     }
     
     func bind(_ listener: @escaping Listener) {
-        listener(value)
         self.listener = listener
+        if let value = self.value {
+            listener(value)
+        }
     }
 }

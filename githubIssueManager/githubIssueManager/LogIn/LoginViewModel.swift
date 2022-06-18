@@ -3,19 +3,16 @@ import Foundation
 final class LoginViewModel: BasicViewModel {
     
     struct Input {
-        let loginButtonTapped = Observable<Bool>(false)
+        let loginButtonTapped = Observable<Bool>()
     }
     
     struct Output {
-        let loginRequested = Observable<Bool>(false)
+        let loginUrl = Observable<URL>()
     }
     
     let input = Input()
     let output = Output()
     let repository: LoginRepository
-    var loginUrl: URL? {
-        return repository.getAuthenticationRequestUrl()
-    }
     
     init(repository: LoginRepository = LoginRepository()) {
         self.repository = repository
@@ -25,7 +22,7 @@ final class LoginViewModel: BasicViewModel {
     private func bind() {
         input.loginButtonTapped.bind { [weak self] isTapped in
             guard isTapped == true else { return }
-            self?.output.loginRequested.value = true
+            self?.output.loginUrl.value = self?.repository.getAuthenticationRequestUrl()
         }
     }
 }
