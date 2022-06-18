@@ -8,4 +8,8 @@ final class Log {
         logger.debug("\(message)")
     }
     
+    static func error(_ message: String) {
+        logger.error("\(message)")
+    }
+    
 }

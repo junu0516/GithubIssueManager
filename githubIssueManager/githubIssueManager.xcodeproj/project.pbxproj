@@ -32,6 +32,8 @@
 		B53CFCAE285DDEB500C81EE3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCAD285DDEB500C81EE3 /* Path.swift */; };
 		B53CFCB0285DDECC00C81EE3 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCAF285DDECC00C81EE3 /* HttpMethod.swift */; };
 		B53CFCB3285DFB4C00C81EE3 /* GithubKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */; };
+		B5B7E7BC285E12630077E97D /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BB285E12630077E97D /* AuthRequest.swift */; };
+		B5B7E7BE285E16EC0077E97D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */; };
 		EEC8393A7CC1C82330BDB5A3 /* Pods_githubIssueManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2461462E42448731A820A9A1 /* Pods_githubIssueManagerTests.framework */; };
 		FEF82E538C6374486E2E9642 /* Pods_githubIssueManager_githubIssueManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -90,6 +92,8 @@
 		B53CFCAD285DDEB500C81EE3 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		B53CFCAF285DDECC00C81EE3 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GithubKeys.plist; sourceTree = "<group>"; };
+		B5B7E7BB285E12630077E97D /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
+		B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubIssueManager_githubIssueManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,6 +163,7 @@
 				B53CFCB1285DFB2600C81EE3 /* Resources */,
 				B53CFC9E285C6F1E00C81EE3 /* Network */,
 				B53CFC97285C61F700C81EE3 /* Common */,
+				B5B7E7BA285E12510077E97D /* Entities */,
 				B53CFC8E285C496200C81EE3 /* Coordinator */,
 				B53CFC8D285C47D500C81EE3 /* LogIn */,
 				B53CFC8C285C2C6000C81EE3 /* Supportings */,
@@ -243,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				B53CFCA3285C78A300C81EE3 /* UIButton+Extension.swift */,
+				B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -253,6 +259,14 @@
 				B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B5B7E7BA285E12510077E97D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B5B7E7BB285E12630077E97D /* AuthRequest.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		F8F8C31DF8B7A9379609A2C5 /* Pods */ = {
@@ -518,11 +532,13 @@
 				B53CFC96285C5A2200C81EE3 /* LoginCoordinator.swift in Sources */,
 				B53CFC5D285C23FB00C81EE3 /* AppDelegate.swift in Sources */,
 				B53CFCA4285C78A300C81EE3 /* UIButton+Extension.swift in Sources */,
+				B5B7E7BE285E16EC0077E97D /* Bundle+Extension.swift in Sources */,
 				B53CFCA1285C757A00C81EE3 /* BasicViewModel.swift in Sources */,
 				B53CFCAA285DDD4000C81EE3 /* NetworkTarget.swift in Sources */,
 				B53CFC94285C4CAA00C81EE3 /* CoordinatorFactory.swift in Sources */,
 				B53CFC5F285C23FB00C81EE3 /* SceneDelegate.swift in Sources */,
 				B53CFC90285C498700C81EE3 /* AppCoordinator.swift in Sources */,
+				B5B7E7BC285E12630077E97D /* AuthRequest.swift in Sources */,
 				B53CFC99285C620100C81EE3 /* Logger.swift in Sources */,
 				B53CFC9B285C6CEE00C81EE3 /* LoginViewModel.swift in Sources */,
 			);
