@@ -14,12 +14,30 @@ final class LoginViewController: UIViewController {
         button.layer.cornerRadius = 10
         return button
     }()
+    
+    private var viewModel: LoginViewModel?
+    
+    convenience init(viewModel: LoginViewModel) {
+        self.init()
+        self.viewModel = viewModel
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         addViews()
+        bindActions()
     }
     
+    private func bindActions() {
+        githubLoginButton.tapped { [weak self] in
+            self?.viewModel?.input.loginButtonTapped.value = true
+        }
+        
+        viewModel?.output.loginRequested.bind { _ in
+            Log.debug("login requested")
+        }
+    }
+
     private func addViews() {
         view.addSubview(githubLoginButton)
         githubLoginButton.snp.makeConstraints {
