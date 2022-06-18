@@ -17,7 +17,7 @@ struct NetworkManager: NetworkManagable {
     private func encoder(parameterType: ParameterType) -> ParameterEncoding {
         switch parameterType {
         case .json:
-            return JSONEncoding.default
+            return JSONEncoding.prettyPrinted
         case .form:
             return URLEncoding.default
         case .query:
