@@ -11,6 +11,10 @@
 		B5036233285E575A00F82C4E /* ObjectConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5036232285E575A00F82C4E /* ObjectConverter.swift */; };
 		B5036235285E5C3E00F82C4E /* DeepLinkeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5036234285E5C3E00F82C4E /* DeepLinkeRouter.swift */; };
 		B5036237285F674C00F82C4E /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5036236285F674C00F82C4E /* AuthResponse.swift */; };
+		B503623C285F6A3500F82C4E /* MainCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503623B285F6A3500F82C4E /* MainCoordinator.swift */; };
+		B503623E285F6B6400F82C4E /* IssueListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B503623D285F6B6400F82C4E /* IssueListViewController.swift */; };
+		B5036241285F833300F82C4E /* IssueListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5036240285F833300F82C4E /* IssueListCoordinator.swift */; };
+		B5036243285F8A5B00F82C4E /* IssueListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5036242285F8A5B00F82C4E /* IssueListViewModel.swift */; };
 		B53CFC5D285C23FB00C81EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC5C285C23FB00C81EE3 /* AppDelegate.swift */; };
 		B53CFC5F285C23FB00C81EE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC5E285C23FB00C81EE3 /* SceneDelegate.swift */; };
 		B53CFC61285C23FB00C81EE3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC60285C23FB00C81EE3 /* LoginViewController.swift */; };
@@ -70,6 +74,10 @@
 		B5036232285E575A00F82C4E /* ObjectConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectConverter.swift; sourceTree = "<group>"; };
 		B5036234285E5C3E00F82C4E /* DeepLinkeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkeRouter.swift; sourceTree = "<group>"; };
 		B5036236285F674C00F82C4E /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
+		B503623B285F6A3500F82C4E /* MainCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainCoordinator.swift; sourceTree = "<group>"; };
+		B503623D285F6B6400F82C4E /* IssueListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListViewController.swift; sourceTree = "<group>"; };
+		B5036240285F833300F82C4E /* IssueListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListCoordinator.swift; sourceTree = "<group>"; };
+		B5036242285F8A5B00F82C4E /* IssueListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListViewModel.swift; sourceTree = "<group>"; };
 		B53CFC59285C23FB00C81EE3 /* githubIssueManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubIssueManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53CFC5C285C23FB00C81EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B53CFC5E285C23FB00C81EE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +149,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		B503623A285F6A1E00F82C4E /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B503623B285F6A3500F82C4E /* MainCoordinator.swift */,
+				B503623F285F808F00F82C4E /* IssueList */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B503623F285F808F00F82C4E /* IssueList */ = {
+			isa = PBXGroup;
+			children = (
+				B5036240285F833300F82C4E /* IssueListCoordinator.swift */,
+				B503623D285F6B6400F82C4E /* IssueListViewController.swift */,
+				B5036242285F8A5B00F82C4E /* IssueListViewModel.swift */,
+			);
+			path = IssueList;
+			sourceTree = "<group>";
+		};
 		B53CFC50285C23FB00C81EE3 = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +199,7 @@
 				B5B7E7BA285E12510077E97D /* Entities */,
 				B53CFC8E285C496200C81EE3 /* Coordinator */,
 				B53CFC8D285C47D500C81EE3 /* LogIn */,
+				B503623A285F6A1E00F82C4E /* Main */,
 				B53CFC8C285C2C6000C81EE3 /* Supportings */,
 				B53CFC65285C23FD00C81EE3 /* Assets.xcassets */,
 				B53CFC67285C23FD00C81EE3 /* LaunchScreen.storyboard */,
@@ -531,19 +559,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				B53CFCAE285DDEB500C81EE3 /* Path.swift in Sources */,
+				B503623C285F6A3500F82C4E /* MainCoordinator.swift in Sources */,
 				B53CFCA6285D815900C81EE3 /* Observable.swift in Sources */,
 				B53CFC9D285C6F1400C81EE3 /* NetworkManager.swift in Sources */,
 				B53CFC92285C49B300C81EE3 /* Coordinator.swift in Sources */,
 				B53CFCB0285DDECC00C81EE3 /* HttpMethod.swift in Sources */,
 				B53CFCAC285DDE2600C81EE3 /* NetworkManagable.swift in Sources */,
 				B53CFCA8285D848E00C81EE3 /* LoginRepository.swift in Sources */,
+				B5036241285F833300F82C4E /* IssueListCoordinator.swift in Sources */,
 				B53CFC61285C23FB00C81EE3 /* LoginViewController.swift in Sources */,
 				B53CFC96285C5A2200C81EE3 /* LoginCoordinator.swift in Sources */,
 				B53CFC5D285C23FB00C81EE3 /* AppDelegate.swift in Sources */,
 				B53CFCA4285C78A300C81EE3 /* UIButton+Extension.swift in Sources */,
 				B5036233285E575A00F82C4E /* ObjectConverter.swift in Sources */,
 				B5B7E7BE285E16EC0077E97D /* Bundle+Extension.swift in Sources */,
+				B503623E285F6B6400F82C4E /* IssueListViewController.swift in Sources */,
 				B53CFCA1285C757A00C81EE3 /* BasicViewModel.swift in Sources */,
+				B5036243285F8A5B00F82C4E /* IssueListViewModel.swift in Sources */,
 				B5036235285E5C3E00F82C4E /* DeepLinkeRouter.swift in Sources */,
 				B53CFCAA285DDD4000C81EE3 /* NetworkTarget.swift in Sources */,
 				B53CFC94285C4CAA00C81EE3 /* CoordinatorFactory.swift in Sources */,
