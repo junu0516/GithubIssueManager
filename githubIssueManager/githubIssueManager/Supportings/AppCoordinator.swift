@@ -16,6 +16,15 @@ final class AppCoordinator: Coordinator {
         coordinator.start()
         addCoordinator(coordinator)
         self.navigationController = coordinator.navigationController
-        Log.debug("set UIViewController in \(type) as first view")
+        Log.debug("set \(type) as initial view controller")
+    }
+    
+    func setGithubAccessToken(token: String?) {
+        guard let token = token else {
+            Log.error("access token value nil")
+            return
+        }
+        Log.debug("token: \(token)")
     }
 }
+

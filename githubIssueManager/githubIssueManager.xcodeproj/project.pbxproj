@@ -10,6 +10,7 @@
 		8A496A7881C854D55C031878 /* Pods_githubIssueManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE7E5F9124707F3031D0F59 /* Pods_githubIssueManager.framework */; };
 		B5036233285E575A00F82C4E /* ObjectConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5036232285E575A00F82C4E /* ObjectConverter.swift */; };
 		B5036235285E5C3E00F82C4E /* DeepLinkeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5036234285E5C3E00F82C4E /* DeepLinkeRouter.swift */; };
+		B5036237285F674C00F82C4E /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5036236285F674C00F82C4E /* AuthResponse.swift */; };
 		B53CFC5D285C23FB00C81EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC5C285C23FB00C81EE3 /* AppDelegate.swift */; };
 		B53CFC5F285C23FB00C81EE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC5E285C23FB00C81EE3 /* SceneDelegate.swift */; };
 		B53CFC61285C23FB00C81EE3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC60285C23FB00C81EE3 /* LoginViewController.swift */; };
@@ -68,6 +69,7 @@
 		B1856AE6EB4395936E544F47 /* Pods-githubIssueManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubIssueManager.release.xcconfig"; path = "Target Support Files/Pods-githubIssueManager/Pods-githubIssueManager.release.xcconfig"; sourceTree = "<group>"; };
 		B5036232285E575A00F82C4E /* ObjectConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectConverter.swift; sourceTree = "<group>"; };
 		B5036234285E5C3E00F82C4E /* DeepLinkeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkeRouter.swift; sourceTree = "<group>"; };
+		B5036236285F674C00F82C4E /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		B53CFC59285C23FB00C81EE3 /* githubIssueManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubIssueManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53CFC5C285C23FB00C81EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B53CFC5E285C23FB00C81EE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -271,6 +273,7 @@
 			isa = PBXGroup;
 			children = (
 				B5B7E7BB285E12630077E97D /* AuthRequest.swift */,
+				B5036236285F674C00F82C4E /* AuthResponse.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -548,6 +551,7 @@
 				B53CFC90285C498700C81EE3 /* AppCoordinator.swift in Sources */,
 				B5B7E7BC285E12630077E97D /* AuthRequest.swift in Sources */,
 				B53CFC99285C620100C81EE3 /* Logger.swift in Sources */,
+				B5036237285F674C00F82C4E /* AuthResponse.swift in Sources */,
 				B53CFC9B285C6CEE00C81EE3 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
