@@ -11,10 +11,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         Log.debug("got UIWindowScene instance")
         
-        self.appCoordinator = CoordinatorFactory.create(type: AppCoordinator.self)
-        if let appCoordinator = self.appCoordinator as? AppCoordinator {
-            appCoordinator.delegate = self
-        }
+        self.appCoordinator = CoordinatorFactory.createCoordinator(type: AppCoordinator.self)
         Log.debug("created AppCoordinator")
         
         appCoordinator?.start()
@@ -38,11 +35,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let authCode = url.description.components(separatedBy: "=").last ?? ""
         self.deepLinkRouter?.authCode.value = authCode
      }
-}
-
-extension SceneDelegate: AppCoordinatorDelegate {
-    
-    func switchRootView(navigationController: UINavigationController?) {
-        self.window?.rootViewController = navigationController
-    }
 }

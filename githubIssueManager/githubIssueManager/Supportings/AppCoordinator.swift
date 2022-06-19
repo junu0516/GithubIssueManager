@@ -1,38 +1,22 @@
 import UIKit
 
-protocol AppCoordinatorDelegate: AnyObject {
-    func switchRootView(navigationController: UINavigationController?)
-}
-
 final class AppCoordinator: Coordinator {
     
-    weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
-    private (set)var navigationController: UINavigationController?
-    weak var delegate: AppCoordinatorDelegate?
+    var navigationController: UINavigationController?
 
     required init() {}
     
     func start() {
-        if isTokenAvailable() {
-            moveToViewController(type: MainCoordinator.self)
-        } else {
-            moveToViewController(type: LoginCoordinator.self)
-        }
+        moveToFirstView(type: LoginCoordinator.self)
     }
     
-    private func isTokenAvailable() -> Bool {
-        return UserDefaults.standard.object(forKey: "Github_Access_Token") == nil
-    }
-    
-    private func moveToViewController<T: Coordinator>(type: T.Type) {
-        guard let coordinator = CoordinatorFactory.create(type: type) else { return }
-        childCoordinators.removeAll()
-        coordinator.parentCoordinator = self
-        self.navigationController = coordinator.navigationController
-        childCoordinators.append(coordinator)
+    private func moveToFirstView<T: Coordinator>(type: T.Type) {
+        guard let coordinator = CoordinatorFactory.createCoordinator(type: type) else { return }
         coordinator.start()
-        Log.debug("move to \(type)")
+        addCoordinator(coordinator)
+        self.navigationController = coordinator.navigationController
+        Log.debug("set \(type) as initial view controller")
     }
     
     func setGithubAccessToken(token: String?) {
@@ -40,12 +24,7 @@ final class AppCoordinator: Coordinator {
             Log.error("access token value nil")
             return
         }
-        
         Log.debug("token: \(token)")
-        UserDefaults.standard.set(token, forKey: "Github_Access_Token")
-
-        moveToViewController(type: MainCoordinator.self)
-        delegate?.switchRootView(navigationController: navigationController)
     }
 }
 

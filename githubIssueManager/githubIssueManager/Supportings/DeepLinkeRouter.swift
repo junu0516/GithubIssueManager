@@ -3,10 +3,9 @@ import Foundation
 final class DeepLinkRouter {
     
     private weak var appCoordinator: AppCoordinator?
-    private let networkManager: NetworkManagable
-    private let objectConverter: ObjectConvertible
-
     var authCode = Observable<String>()
+    let networkManager: NetworkManagable
+    let objectConverter: ObjectConvertible
     
     init?(appCoordinator: Coordinator?,
           networkManager: NetworkManagable = NetworkManager(),
@@ -37,10 +36,11 @@ final class DeepLinkRouter {
             switch result {
             case .success(let data):
                 let authResponse = self?.objectConverter.convertJsonToObject(from: data, to: AuthResponse.self)
-                self?.appCoordinator?.setGithubAccessToken(token: authResponse?.accessToken)
+                self?.appCoordinator?.setGithubAccessToken(token: authResponse?.accessToken)                
             case .failure(let error):
                 Log.error("\(error.localizedDescription)")
             }
         }
+    
     }
 }
