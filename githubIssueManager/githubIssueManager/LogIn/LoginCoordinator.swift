@@ -3,7 +3,7 @@ import UIKit
 final class LoginCoordinator: Coordinator {
     
     weak var parentCoordinator: Coordinator?
-    var childCoordinators: [Coordinator] = []
+    private (set)var childCoordinators: [Coordinator] = []
     private (set)var navigationController: UINavigationController?
 
     required init() {

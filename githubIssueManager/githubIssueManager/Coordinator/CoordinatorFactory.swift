@@ -13,7 +13,7 @@ final class CoordinatorFactory: CoordinatorFactoryApplicable {
         ObjectIdentifier(MainCoordinator.self): MainCoordinator.self,
         ObjectIdentifier(IssueListCoordinator.self): IssueListCoordinator.self
     ]
-    
+        
     static func create<T:Coordinator>(type: T.Type) -> Coordinator? {
         guard let coordinator = coordinatorType[ObjectIdentifier(type)] else { return nil }
 

@@ -2,8 +2,8 @@ import UIKit
 
 final class IssueListCoordinator: Coordinator {
     
-    var parentCoordinator: Coordinator?
-    var childCoordinators: [Coordinator] = []
+    weak var parentCoordinator: Coordinator?
+    private (set)var childCoordinators: [Coordinator] = []
     private (set)var navigationController: UINavigationController?
     
     required init() {

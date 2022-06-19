@@ -30,7 +30,7 @@ final class AppCoordinator: Coordinator {
         childCoordinators.removeAll()
         coordinator.parentCoordinator = self
         self.navigationController = coordinator.navigationController
-        addCoordinator(coordinator)
+        childCoordinators.append(coordinator)
         coordinator.start()
         Log.debug("move to \(type)")
     }

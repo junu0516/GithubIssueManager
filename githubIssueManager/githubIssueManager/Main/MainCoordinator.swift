@@ -3,7 +3,7 @@ import UIKit
 final class MainCoordinator: Coordinator {
 
     weak var parentCoordinator: Coordinator?
-    var childCoordinators: [Coordinator] = []
+    private (set)var childCoordinators: [Coordinator] = []
     private (set)var navigationController: UINavigationController?
     
     required init() {
@@ -16,7 +16,7 @@ final class MainCoordinator: Coordinator {
             guard let coordinator = childView.coordinator else { continue }
             coordinator.parentCoordinator = self
             coordinator.navigationController?.tabBarItem = childView.tabbarItem
-            addCoordinator(coordinator)
+            childCoordinators.append(coordinator)
             coordinator.start()
         }
         
