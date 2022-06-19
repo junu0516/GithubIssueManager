@@ -22,7 +22,7 @@ final class AppCoordinator: Coordinator {
     }
     
     private func isTokenAvailable() -> Bool {
-        return UserDefaults.standard.object(forKey: "Github_Access_Token") == nil
+        return UserDefaults.standard.object(forKey: "Github_Access_Token") != nil
     }
     
     private func moveToViewController<T: Coordinator>(type: T.Type) {

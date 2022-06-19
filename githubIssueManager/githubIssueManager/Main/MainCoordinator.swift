@@ -33,7 +33,7 @@ final class MainCoordinator: Coordinator {
 
 extension MainCoordinator {
     
-    enum ChildView: CaseIterable {
+    private enum ChildView: CaseIterable {
         case issue
         case label
         case milestone
