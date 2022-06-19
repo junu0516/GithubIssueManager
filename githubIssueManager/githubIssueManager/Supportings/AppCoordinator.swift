@@ -1,23 +1,30 @@
 import UIKit
 
+protocol AppCoordinatorDelegate: AnyObject {
+    func switchRootView(navigationController: UINavigationController?)
+}
+
 final class AppCoordinator: Coordinator {
     
     weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
     private (set)var navigationController: UINavigationController?
+    weak var delegate: AppCoordinatorDelegate?
 
     required init() {}
     
     func start() {
-        moveToFirstView(type: LoginCoordinator.self)
+        moveToViewController(type: LoginCoordinator.self)
     }
     
-    private func moveToFirstView<T: Coordinator>(type: T.Type) {
-        guard let coordinator = CoordinatorFactory.createCoordinator(type: type) else { return }
-        coordinator.start()
-        addCoordinator(coordinator)
+    private func moveToViewController<T: Coordinator>(type: T.Type) {
+        guard let coordinator = CoordinatorFactory.create(type: type) else { return }
+        childCoordinators.removeAll()
+        coordinator.parentCoordinator = self
         self.navigationController = coordinator.navigationController
-        Log.debug("set \(type) as initial view controller")
+        addCoordinator(coordinator)
+        coordinator.start()
+        Log.debug("move to \(type)")
     }
     
     func setGithubAccessToken(token: String?) {
@@ -26,6 +33,9 @@ final class AppCoordinator: Coordinator {
             return
         }
         Log.debug("token: \(token)")
+        
+        moveToViewController(type: MainCoordinator.self)
+        delegate?.switchRootView(navigationController: navigationController)
     }
 }
 
