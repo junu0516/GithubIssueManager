@@ -1,9 +1,10 @@
 import UIKit
 
-class LoginCoordinator: Coordinator {
+final class LoginCoordinator: Coordinator {
     
+    weak var parentCoordinator: Coordinator?
     var childCoordinators: [Coordinator] = []
-    var navigationController: UINavigationController?
+    private (set)var navigationController: UINavigationController?
 
     required init() {
         self.navigationController = UINavigationController()

@@ -2,7 +2,7 @@ import Foundation
 
 protocol CoordinatorFactoryApplicable {
     
-    static func createCoordinator<T:Coordinator>(type: T.Type) -> Coordinator?
+    static func create<T:Coordinator>(type: T.Type) -> Coordinator?
 }
 
 final class CoordinatorFactory: CoordinatorFactoryApplicable {
@@ -13,7 +13,7 @@ final class CoordinatorFactory: CoordinatorFactoryApplicable {
         ObjectIdentifier(MainCoordinator.self): MainCoordinator.self
     ]
     
-    static func createCoordinator<T:Coordinator>(type: T.Type) -> Coordinator? {
+    static func create<T:Coordinator>(type: T.Type) -> Coordinator? {
         guard let coordinator = coordinatorType[ObjectIdentifier(type)] else { return nil }
 
         return coordinator.init()
