@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		8A496A7881C854D55C031878 /* Pods_githubIssueManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE7E5F9124707F3031D0F59 /* Pods_githubIssueManager.framework */; };
+		B5036233285E575A00F82C4E /* ObjectConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5036232285E575A00F82C4E /* ObjectConverter.swift */; };
+		B5036235285E5C3E00F82C4E /* DeepLinkeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5036234285E5C3E00F82C4E /* DeepLinkeRouter.swift */; };
+		B5036237285F674C00F82C4E /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5036236285F674C00F82C4E /* AuthResponse.swift */; };
 		B53CFC5D285C23FB00C81EE3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC5C285C23FB00C81EE3 /* AppDelegate.swift */; };
 		B53CFC5F285C23FB00C81EE3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC5E285C23FB00C81EE3 /* SceneDelegate.swift */; };
 		B53CFC61285C23FB00C81EE3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC60285C23FB00C81EE3 /* LoginViewController.swift */; };
@@ -21,6 +24,19 @@
 		B53CFC94285C4CAA00C81EE3 /* CoordinatorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC93285C4CAA00C81EE3 /* CoordinatorFactory.swift */; };
 		B53CFC96285C5A2200C81EE3 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC95285C5A2200C81EE3 /* LoginCoordinator.swift */; };
 		B53CFC99285C620100C81EE3 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC98285C620100C81EE3 /* Logger.swift */; };
+		B53CFC9B285C6CEE00C81EE3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC9A285C6CEE00C81EE3 /* LoginViewModel.swift */; };
+		B53CFC9D285C6F1400C81EE3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC9C285C6F1400C81EE3 /* NetworkManager.swift */; };
+		B53CFCA1285C757A00C81EE3 /* BasicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */; };
+		B53CFCA4285C78A300C81EE3 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA3285C78A300C81EE3 /* UIButton+Extension.swift */; };
+		B53CFCA6285D815900C81EE3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA5285D815900C81EE3 /* Observable.swift */; };
+		B53CFCA8285D848E00C81EE3 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA7285D848E00C81EE3 /* LoginRepository.swift */; };
+		B53CFCAA285DDD4000C81EE3 /* NetworkTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA9285DDD4000C81EE3 /* NetworkTarget.swift */; };
+		B53CFCAC285DDE2600C81EE3 /* NetworkManagable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCAB285DDE2600C81EE3 /* NetworkManagable.swift */; };
+		B53CFCAE285DDEB500C81EE3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCAD285DDEB500C81EE3 /* Path.swift */; };
+		B53CFCB0285DDECC00C81EE3 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCAF285DDECC00C81EE3 /* HttpMethod.swift */; };
+		B53CFCB3285DFB4C00C81EE3 /* GithubKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */; };
+		B5B7E7BC285E12630077E97D /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BB285E12630077E97D /* AuthRequest.swift */; };
+		B5B7E7BE285E16EC0077E97D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */; };
 		EEC8393A7CC1C82330BDB5A3 /* Pods_githubIssueManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2461462E42448731A820A9A1 /* Pods_githubIssueManagerTests.framework */; };
 		FEF82E538C6374486E2E9642 /* Pods_githubIssueManager_githubIssueManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -51,6 +67,9 @@
 		7BE7E5F9124707F3031D0F59 /* Pods_githubIssueManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubIssueManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08B76555F60011C279258CA /* Pods-githubIssueManagerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubIssueManagerTests.release.xcconfig"; path = "Target Support Files/Pods-githubIssueManagerTests/Pods-githubIssueManagerTests.release.xcconfig"; sourceTree = "<group>"; };
 		B1856AE6EB4395936E544F47 /* Pods-githubIssueManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-githubIssueManager.release.xcconfig"; path = "Target Support Files/Pods-githubIssueManager/Pods-githubIssueManager.release.xcconfig"; sourceTree = "<group>"; };
+		B5036232285E575A00F82C4E /* ObjectConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObjectConverter.swift; sourceTree = "<group>"; };
+		B5036234285E5C3E00F82C4E /* DeepLinkeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepLinkeRouter.swift; sourceTree = "<group>"; };
+		B5036236285F674C00F82C4E /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 		B53CFC59285C23FB00C81EE3 /* githubIssueManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = githubIssueManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B53CFC5C285C23FB00C81EE3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B53CFC5E285C23FB00C81EE3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -68,6 +87,19 @@
 		B53CFC93285C4CAA00C81EE3 /* CoordinatorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorFactory.swift; sourceTree = "<group>"; };
 		B53CFC95285C5A2200C81EE3 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		B53CFC98285C620100C81EE3 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		B53CFC9A285C6CEE00C81EE3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		B53CFC9C285C6F1400C81EE3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewModel.swift; sourceTree = "<group>"; };
+		B53CFCA3285C78A300C81EE3 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		B53CFCA5285D815900C81EE3 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		B53CFCA7285D848E00C81EE3 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
+		B53CFCA9285DDD4000C81EE3 /* NetworkTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTarget.swift; sourceTree = "<group>"; };
+		B53CFCAB285DDE2600C81EE3 /* NetworkManagable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagable.swift; sourceTree = "<group>"; };
+		B53CFCAD285DDEB500C81EE3 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		B53CFCAF285DDECC00C81EE3 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GithubKeys.plist; sourceTree = "<group>"; };
+		B5B7E7BB285E12630077E97D /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
+		B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubIssueManager_githubIssueManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -134,7 +166,10 @@
 		B53CFC5B285C23FB00C81EE3 /* githubIssueManager */ = {
 			isa = PBXGroup;
 			children = (
+				B53CFCB1285DFB2600C81EE3 /* Resources */,
+				B53CFC9E285C6F1E00C81EE3 /* Network */,
 				B53CFC97285C61F700C81EE3 /* Common */,
+				B5B7E7BA285E12510077E97D /* Entities */,
 				B53CFC8E285C496200C81EE3 /* Coordinator */,
 				B53CFC8D285C47D500C81EE3 /* LogIn */,
 				B53CFC8C285C2C6000C81EE3 /* Supportings */,
@@ -168,6 +203,7 @@
 				B53CFC5C285C23FB00C81EE3 /* AppDelegate.swift */,
 				B53CFC8F285C498700C81EE3 /* AppCoordinator.swift */,
 				B53CFC5E285C23FB00C81EE3 /* SceneDelegate.swift */,
+				B5036234285E5C3E00F82C4E /* DeepLinkeRouter.swift */,
 			);
 			path = Supportings;
 			sourceTree = "<group>";
@@ -177,6 +213,8 @@
 			children = (
 				B53CFC60285C23FB00C81EE3 /* LoginViewController.swift */,
 				B53CFC95285C5A2200C81EE3 /* LoginCoordinator.swift */,
+				B53CFC9A285C6CEE00C81EE3 /* LoginViewModel.swift */,
+				B53CFCA7285D848E00C81EE3 /* LoginRepository.swift */,
 			);
 			path = LogIn;
 			sourceTree = "<group>";
@@ -193,9 +231,51 @@
 		B53CFC97285C61F700C81EE3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B53CFCA2285C789700C81EE3 /* Extensions */,
 				B53CFC98285C620100C81EE3 /* Logger.swift */,
+				B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */,
+				B53CFCA5285D815900C81EE3 /* Observable.swift */,
+				B5036232285E575A00F82C4E /* ObjectConverter.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		B53CFC9E285C6F1E00C81EE3 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B53CFCAB285DDE2600C81EE3 /* NetworkManagable.swift */,
+				B53CFC9C285C6F1400C81EE3 /* NetworkManager.swift */,
+				B53CFCA9285DDD4000C81EE3 /* NetworkTarget.swift */,
+				B53CFCAD285DDEB500C81EE3 /* Path.swift */,
+				B53CFCAF285DDECC00C81EE3 /* HttpMethod.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B53CFCA2285C789700C81EE3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B53CFCA3285C78A300C81EE3 /* UIButton+Extension.swift */,
+				B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		B53CFCB1285DFB2600C81EE3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B5B7E7BA285E12510077E97D /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				B5B7E7BB285E12630077E97D /* AuthRequest.swift */,
+				B5036236285F674C00F82C4E /* AuthResponse.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		F8F8C31DF8B7A9379609A2C5 /* Pods */ = {
@@ -320,6 +400,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53CFCB3285DFB4C00C81EE3 /* GithubKeys.plist in Resources */,
 				B53CFC69285C23FD00C81EE3 /* LaunchScreen.storyboard in Resources */,
 				B53CFC66285C23FD00C81EE3 /* Assets.xcassets in Resources */,
 			);
@@ -449,14 +530,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B53CFCAE285DDEB500C81EE3 /* Path.swift in Sources */,
+				B53CFCA6285D815900C81EE3 /* Observable.swift in Sources */,
+				B53CFC9D285C6F1400C81EE3 /* NetworkManager.swift in Sources */,
 				B53CFC92285C49B300C81EE3 /* Coordinator.swift in Sources */,
+				B53CFCB0285DDECC00C81EE3 /* HttpMethod.swift in Sources */,
+				B53CFCAC285DDE2600C81EE3 /* NetworkManagable.swift in Sources */,
+				B53CFCA8285D848E00C81EE3 /* LoginRepository.swift in Sources */,
 				B53CFC61285C23FB00C81EE3 /* LoginViewController.swift in Sources */,
 				B53CFC96285C5A2200C81EE3 /* LoginCoordinator.swift in Sources */,
 				B53CFC5D285C23FB00C81EE3 /* AppDelegate.swift in Sources */,
+				B53CFCA4285C78A300C81EE3 /* UIButton+Extension.swift in Sources */,
+				B5036233285E575A00F82C4E /* ObjectConverter.swift in Sources */,
+				B5B7E7BE285E16EC0077E97D /* Bundle+Extension.swift in Sources */,
+				B53CFCA1285C757A00C81EE3 /* BasicViewModel.swift in Sources */,
+				B5036235285E5C3E00F82C4E /* DeepLinkeRouter.swift in Sources */,
+				B53CFCAA285DDD4000C81EE3 /* NetworkTarget.swift in Sources */,
 				B53CFC94285C4CAA00C81EE3 /* CoordinatorFactory.swift in Sources */,
 				B53CFC5F285C23FB00C81EE3 /* SceneDelegate.swift in Sources */,
 				B53CFC90285C498700C81EE3 /* AppCoordinator.swift in Sources */,
+				B5B7E7BC285E12630077E97D /* AuthRequest.swift in Sources */,
 				B53CFC99285C620100C81EE3 /* Logger.swift in Sources */,
+				B5036237285F674C00F82C4E /* AuthResponse.swift in Sources */,
+				B53CFC9B285C6CEE00C81EE3 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -554,7 +650,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -608,7 +704,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -629,6 +725,7 @@
 				DEVELOPMENT_TEAM = B3PWYBKFUK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = githubIssueManager/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = githubIssueManager;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -657,6 +754,7 @@
 				DEVELOPMENT_TEAM = B3PWYBKFUK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = githubIssueManager/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = githubIssueManager;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
