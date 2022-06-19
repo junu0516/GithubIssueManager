@@ -7,7 +7,7 @@ protocol AppCoordinatorDelegate: AnyObject {
 final class AppCoordinator: Coordinator {
     
     weak var parentCoordinator: Coordinator?
-    var childCoordinators: [Coordinator] = []
+    private (set)var childCoordinators: [Coordinator] = []
     private (set)var navigationController: UINavigationController?
     weak var delegate: AppCoordinatorDelegate?
 
