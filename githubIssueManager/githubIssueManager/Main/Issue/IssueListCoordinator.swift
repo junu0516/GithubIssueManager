@@ -1,6 +1,6 @@
 import UIKit
 
-final class IssueListCoordinator: Coordinator {
+final class IssueViewCoordinator: Coordinator {
     
     weak var parentCoordinator: Coordinator?
     private (set)var childCoordinators: [Coordinator] = []

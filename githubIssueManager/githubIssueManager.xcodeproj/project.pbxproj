@@ -153,19 +153,18 @@
 			isa = PBXGroup;
 			children = (
 				B503623B285F6A3500F82C4E /* MainCoordinator.swift */,
-				B503623F285F808F00F82C4E /* IssueList */,
+				B503623F285F808F00F82C4E /* Issue */,
 			);
 			path = Main;
 			sourceTree = "<group>";
 		};
-		B503623F285F808F00F82C4E /* IssueList */ = {
+		B503623F285F808F00F82C4E /* Issue */ = {
 			isa = PBXGroup;
 			children = (
 				B5036240285F833300F82C4E /* IssueListCoordinator.swift */,
-				B503623D285F6B6400F82C4E /* IssueListViewController.swift */,
-				B5036242285F8A5B00F82C4E /* IssueListViewModel.swift */,
+				B5D4807A2861DEEE0069D16B /* IssueList */,
 			);
-			path = IssueList;
+			path = Issue;
 			sourceTree = "<group>";
 		};
 		B53CFC50285C23FB00C81EE3 = {
@@ -304,6 +303,15 @@
 				B5036236285F674C00F82C4E /* AuthResponse.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		B5D4807A2861DEEE0069D16B /* IssueList */ = {
+			isa = PBXGroup;
+			children = (
+				B5036242285F8A5B00F82C4E /* IssueListViewModel.swift */,
+				B503623D285F6B6400F82C4E /* IssueListViewController.swift */,
+			);
+			path = IssueList;
 			sourceTree = "<group>";
 		};
 		F8F8C31DF8B7A9379609A2C5 /* Pods */ = {
