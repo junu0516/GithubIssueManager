@@ -41,6 +41,9 @@
 		B53CFCB3285DFB4C00C81EE3 /* GithubKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */; };
 		B5B7E7BC285E12630077E97D /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BB285E12630077E97D /* AuthRequest.swift */; };
 		B5B7E7BE285E16EC0077E97D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */; };
+		B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */; };
+		B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480802861E3BF0069D16B /* TableViewCell.swift */; };
+		B5D480852861E5DE0069D16B /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480842861E5DE0069D16B /* TableViewDataSource.swift */; };
 		EEC8393A7CC1C82330BDB5A3 /* Pods_githubIssueManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2461462E42448731A820A9A1 /* Pods_githubIssueManagerTests.framework */; };
 		FEF82E538C6374486E2E9642 /* Pods_githubIssueManager_githubIssueManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +111,9 @@
 		B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GithubKeys.plist; sourceTree = "<group>"; };
 		B5B7E7BB285E12630077E97D /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
 		B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B5D480802861E3BF0069D16B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		B5D480842861E5DE0069D16B /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
 		F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubIssueManager_githubIssueManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -263,6 +269,8 @@
 				B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */,
 				B53CFCA5285D815900C81EE3 /* Observable.swift */,
 				B5036232285E575A00F82C4E /* ObjectConverter.swift */,
+				B5D480802861E3BF0069D16B /* TableViewCell.swift */,
+				B5D480842861E5DE0069D16B /* TableViewDataSource.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -284,6 +292,7 @@
 			children = (
 				B53CFCA3285C78A300C81EE3 /* UIButton+Extension.swift */,
 				B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */,
+				B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -569,10 +578,13 @@
 				B53CFCAE285DDEB500C81EE3 /* Path.swift in Sources */,
 				B503623C285F6A3500F82C4E /* MainCoordinator.swift in Sources */,
 				B53CFCA6285D815900C81EE3 /* Observable.swift in Sources */,
+				B5D480852861E5DE0069D16B /* TableViewDataSource.swift in Sources */,
 				B53CFC9D285C6F1400C81EE3 /* NetworkManager.swift in Sources */,
 				B53CFC92285C49B300C81EE3 /* Coordinator.swift in Sources */,
+				B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */,
 				B53CFCB0285DDECC00C81EE3 /* HttpMethod.swift in Sources */,
 				B53CFCAC285DDE2600C81EE3 /* NetworkManagable.swift in Sources */,
+				B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */,
 				B53CFCA8285D848E00C81EE3 /* LoginRepository.swift in Sources */,
 				B5036241285F833300F82C4E /* IssueListCoordinator.swift in Sources */,
 				B53CFC61285C23FB00C81EE3 /* LoginViewController.swift in Sources */,
