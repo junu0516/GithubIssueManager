@@ -25,11 +25,8 @@ struct IssueListRepository {
                                parameters: Optional<String>.none) { result in
             switch result {
             case .success(let data):
-                if let issues = objectConverter.convertJsonToObject(from: data, to: [Issue].self) {
-                    completion(issues)
-                } else {
-                    Log.error("Parsing error")
-                }
+                let issues = objectConverter.convertJsonToObject(from: data, to: [Issue].self)
+                completion(issues ?? [])
             case .failure(let error):
                 Log.error("\(error)")
             }
