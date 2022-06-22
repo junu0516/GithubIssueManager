@@ -44,6 +44,8 @@
 		B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */; };
 		B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480802861E3BF0069D16B /* TableViewCell.swift */; };
 		B5D480852861E5DE0069D16B /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480842861E5DE0069D16B /* TableViewDataSource.swift */; };
+		B5D4808928630E0E0069D16B /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4808828630E0E0069D16B /* Issue.swift */; };
+		B5D4808B2863107C0069D16B /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4808A2863107C0069D16B /* Milestone.swift */; };
 		EEC8393A7CC1C82330BDB5A3 /* Pods_githubIssueManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2461462E42448731A820A9A1 /* Pods_githubIssueManagerTests.framework */; };
 		FEF82E538C6374486E2E9642 /* Pods_githubIssueManager_githubIssueManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -114,6 +116,8 @@
 		B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B5D480802861E3BF0069D16B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B5D480842861E5DE0069D16B /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		B5D4808828630E0E0069D16B /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
+		B5D4808A2863107C0069D16B /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
 		F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubIssueManager_githubIssueManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -310,6 +314,8 @@
 			children = (
 				B5B7E7BB285E12630077E97D /* AuthRequest.swift */,
 				B5036236285F674C00F82C4E /* AuthResponse.swift */,
+				B5D4808828630E0E0069D16B /* Issue.swift */,
+				B5D4808A2863107C0069D16B /* Milestone.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -580,6 +586,7 @@
 				B53CFCA6285D815900C81EE3 /* Observable.swift in Sources */,
 				B5D480852861E5DE0069D16B /* TableViewDataSource.swift in Sources */,
 				B53CFC9D285C6F1400C81EE3 /* NetworkManager.swift in Sources */,
+				B5D4808B2863107C0069D16B /* Milestone.swift in Sources */,
 				B53CFC92285C49B300C81EE3 /* Coordinator.swift in Sources */,
 				B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */,
 				B53CFCB0285DDECC00C81EE3 /* HttpMethod.swift in Sources */,
@@ -597,6 +604,7 @@
 				B53CFCA1285C757A00C81EE3 /* BasicViewModel.swift in Sources */,
 				B5036243285F8A5B00F82C4E /* IssueListViewModel.swift in Sources */,
 				B5036235285E5C3E00F82C4E /* DeepLinkeRouter.swift in Sources */,
+				B5D4808928630E0E0069D16B /* Issue.swift in Sources */,
 				B53CFCAA285DDD4000C81EE3 /* NetworkTarget.swift in Sources */,
 				B53CFC94285C4CAA00C81EE3 /* CoordinatorFactory.swift in Sources */,
 				B53CFC5F285C23FB00C81EE3 /* SceneDelegate.swift in Sources */,
