@@ -48,6 +48,7 @@
 		B5D480872861F6140069D16B /* IssueListTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480862861F6140069D16B /* IssueListTableViewCellModel.swift */; };
 		B5D4808928630E0E0069D16B /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4808828630E0E0069D16B /* Issue.swift */; };
 		B5D4808B2863107C0069D16B /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4808A2863107C0069D16B /* Milestone.swift */; };
+		B5D4808D286311050069D16B /* IssueListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4808C286311050069D16B /* IssueListRepository.swift */; };
 		EEC8393A7CC1C82330BDB5A3 /* Pods_githubIssueManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2461462E42448731A820A9A1 /* Pods_githubIssueManagerTests.framework */; };
 		FEF82E538C6374486E2E9642 /* Pods_githubIssueManager_githubIssueManagerUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */; };
 /* End PBXBuildFile section */
@@ -122,6 +123,7 @@
 		B5D480862861F6140069D16B /* IssueListTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListTableViewCellModel.swift; sourceTree = "<group>"; };
 		B5D4808828630E0E0069D16B /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		B5D4808A2863107C0069D16B /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
+		B5D4808C286311050069D16B /* IssueListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListRepository.swift; sourceTree = "<group>"; };
 		F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubIssueManager_githubIssueManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -331,6 +333,7 @@
 				B5D480862861F6140069D16B /* IssueListTableViewCellModel.swift */,
 				B5036242285F8A5B00F82C4E /* IssueListViewModel.swift */,
 				B503623D285F6B6400F82C4E /* IssueListViewController.swift */,
+				B5D4808C286311050069D16B /* IssueListRepository.swift */,
 			);
 			path = IssueList;
 			sourceTree = "<group>";
@@ -625,6 +628,7 @@
 				B53CFC5F285C23FB00C81EE3 /* SceneDelegate.swift in Sources */,
 				B53CFC90285C498700C81EE3 /* AppCoordinator.swift in Sources */,
 				B5B7E7BC285E12630077E97D /* AuthRequest.swift in Sources */,
+				B5D4808D286311050069D16B /* IssueListRepository.swift in Sources */,
 				B53CFC99285C620100C81EE3 /* Logger.swift in Sources */,
 				B5036237285F674C00F82C4E /* AuthResponse.swift in Sources */,
 				B53CFC9B285C6CEE00C81EE3 /* LoginViewModel.swift in Sources */,
