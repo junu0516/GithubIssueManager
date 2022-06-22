@@ -42,8 +42,10 @@
 		B5B7E7BC285E12630077E97D /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BB285E12630077E97D /* AuthRequest.swift */; };
 		B5B7E7BE285E16EC0077E97D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */; };
 		B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */; };
+		B5D4807F2861E38D0069D16B /* IssueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */; };
 		B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480802861E3BF0069D16B /* TableViewCell.swift */; };
 		B5D480852861E5DE0069D16B /* TableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480842861E5DE0069D16B /* TableViewDataSource.swift */; };
+		B5D480872861F6140069D16B /* IssueListTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480862861F6140069D16B /* IssueListTableViewCellModel.swift */; };
 		B5D4808928630E0E0069D16B /* Issue.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4808828630E0E0069D16B /* Issue.swift */; };
 		B5D4808B2863107C0069D16B /* Milestone.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4808A2863107C0069D16B /* Milestone.swift */; };
 		EEC8393A7CC1C82330BDB5A3 /* Pods_githubIssueManagerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2461462E42448731A820A9A1 /* Pods_githubIssueManagerTests.framework */; };
@@ -114,8 +116,10 @@
 		B5B7E7BB285E12630077E97D /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
 		B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListTableViewCell.swift; sourceTree = "<group>"; };
 		B5D480802861E3BF0069D16B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		B5D480842861E5DE0069D16B /* TableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewDataSource.swift; sourceTree = "<group>"; };
+		B5D480862861F6140069D16B /* IssueListTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListTableViewCellModel.swift; sourceTree = "<group>"; };
 		B5D4808828630E0E0069D16B /* Issue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Issue.swift; sourceTree = "<group>"; };
 		B5D4808A2863107C0069D16B /* Milestone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Milestone.swift; sourceTree = "<group>"; };
 		F6815203A41B926E7F29DE92 /* Pods_githubIssueManager_githubIssueManagerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_githubIssueManager_githubIssueManagerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -323,10 +327,20 @@
 		B5D4807A2861DEEE0069D16B /* IssueList */ = {
 			isa = PBXGroup;
 			children = (
+				B5D4807B2861DF160069D16B /* Views */,
+				B5D480862861F6140069D16B /* IssueListTableViewCellModel.swift */,
 				B5036242285F8A5B00F82C4E /* IssueListViewModel.swift */,
 				B503623D285F6B6400F82C4E /* IssueListViewController.swift */,
 			);
 			path = IssueList;
+			sourceTree = "<group>";
+		};
+		B5D4807B2861DF160069D16B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		F8F8C31DF8B7A9379609A2C5 /* Pods */ = {
@@ -582,6 +596,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B53CFCAE285DDEB500C81EE3 /* Path.swift in Sources */,
+				B5D4807F2861E38D0069D16B /* IssueListTableViewCell.swift in Sources */,
 				B503623C285F6A3500F82C4E /* MainCoordinator.swift in Sources */,
 				B53CFCA6285D815900C81EE3 /* Observable.swift in Sources */,
 				B5D480852861E5DE0069D16B /* TableViewDataSource.swift in Sources */,
@@ -613,6 +628,7 @@
 				B53CFC99285C620100C81EE3 /* Logger.swift in Sources */,
 				B5036237285F674C00F82C4E /* AuthResponse.swift in Sources */,
 				B53CFC9B285C6CEE00C81EE3 /* LoginViewModel.swift in Sources */,
+				B5D480872861F6140069D16B /* IssueListTableViewCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
