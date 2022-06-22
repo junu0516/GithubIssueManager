@@ -5,6 +5,9 @@ struct IssueListRepository {
     private let networkManager: NetworkManagable
     private let objectConverter: ObjectConvertible
     
+    @UserDefault(key: .authToken)
+    private var accessToken: String
+    
     init(networkManager: NetworkManagable = NetworkManager(),
          objectConverter: ObjectConvertible = ObjectConverter()) {
         self.networkManager = networkManager
@@ -12,12 +15,11 @@ struct IssueListRepository {
     }
     
     func requestIssues(completion: @escaping ([Issue]) -> Void) {
-        guard let token = UserDefaults.standard.object(forKey: "Github_Access_Token") as? String else { return }
         guard let target = NetworkTarget(path: .githubIssues(owner: "junu0516", repo: "GithubIssueManager"),
                                          method: .get,
                                          paramteterType: .json,
                                          headers: ["Accept":"application/vnd.github.v3+json",
-                                                   "Authorization":"toekn \(token)"]) else { return }
+                                                   "Authorization":"toekn \(accessToken)"]) else { return }
         
         networkManager.request(target: target,
                                parameters: Optional<String>.none) { result in
