@@ -19,7 +19,7 @@ struct IssueListRepository {
                                          method: .get,
                                          paramteterType: .json,
                                          headers: ["Accept":"application/vnd.github.v3+json",
-                                                   "Authorization":"toekn \(accessToken)"]) else { return }
+                                                   "Authorization":"token \(accessToken)"]) else { return }
         
         networkManager.request(target: target,
                                parameters: Optional<String>.none) { result in
