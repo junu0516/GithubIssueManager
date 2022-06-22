@@ -12,11 +12,23 @@ struct ObjectConverter: ObjectConvertible {
     private let decoder = JSONDecoder()
     
     func convertJsonToObject<T: Decodable>(from data: Data, to targetType: T.Type) -> T? {
-        return try? decoder.decode(T.self, from: data)
+        
+        guard let decodedObject = try? decoder.decode(T.self, from: data) else {
+            Log.error("JSON Decoding error: \(targetType)")
+            return nil
+        }
+                
+        return decodedObject
     }
     
     func convertObjectToJson<T: Encodable>(from object: T) -> Data? {
-        return try? encoder.encode(object)
+    
+        guard let encodedJson = try? encoder.encode(object) else {
+            Log.error("JSON Encoding error: \(String(describing: object))")
+            return nil
+        }
+        
+        return encodedJson
     }
     
     func convertObjectToDictionary<T: Encodable>(from object: T) -> [String:Any]? {

@@ -33,7 +33,7 @@ final class MainCoordinator: Coordinator {
 
 extension MainCoordinator {
     
-    enum ChildView: CaseIterable {
+    private enum ChildView: CaseIterable {
         case issue
         case label
         case milestone
@@ -41,11 +41,11 @@ extension MainCoordinator {
         var coordinator: Coordinator? {
             switch self {
             case .issue:
-                return CoordinatorFactory.create(type: IssueListCoordinator.self)
+                return CoordinatorFactory.create(type: IssueViewCoordinator.self)
             case .label:
-                return CoordinatorFactory.create(type: IssueListCoordinator.self)
+                return CoordinatorFactory.create(type: IssueViewCoordinator.self)
             case .milestone:
-                return CoordinatorFactory.create(type: IssueListCoordinator.self)
+                return CoordinatorFactory.create(type: IssueViewCoordinator.self)
             }
         }
         
