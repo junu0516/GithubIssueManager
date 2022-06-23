@@ -7,21 +7,26 @@ final class DeepLinkRouter {
     private let objectConverter: ObjectConvertible
 
     var authCode = Observable<String>()
+    var authToken = Observable<String>()
     
     init?(appCoordinator: Coordinator?,
           networkManager: NetworkManagable = NetworkManager(),
           objectConverter: ObjectConvertible = ObjectConverter()) {
-        guard let appCoordinator = appCoordinator as? AppCoordinator else { return nil }
-
-        self.appCoordinator = appCoordinator
+        self.appCoordinator = appCoordinator as? AppCoordinator
         self.networkManager = networkManager
         self.objectConverter = objectConverter
+        
         bind()
     }
     
     private func bind() {
         authCode.bind { [weak self] authCode in
             self?.requestAccessToken()
+        }
+        
+        authToken.bind { [weak self] authToken in
+            self?.appCoordinator?.accessToken = authToken
+            self?.appCoordinator?.moveToMainViewController()
         }
     }
     
@@ -37,10 +42,20 @@ final class DeepLinkRouter {
             switch result {
             case .success(let data):
                 let authResponse = self?.objectConverter.convertJsonToObject(from: data, to: AuthResponse.self)
-                self?.appCoordinator?.setGithubAccessToken(token: authResponse?.accessToken)
+                self?.setGithubAccessToken(token: authResponse?.accessToken)
             case .failure(let error):
                 Log.error("\(error.localizedDescription)")
             }
         }
+    }
+    
+    private func setGithubAccessToken(token: String?) {
+        guard let token = token else {
+            Log.error("access token value nil")
+            return
+        }
+        
+        Log.debug("token: \(token)")
+        authToken.value = token
     }
 }
