@@ -53,7 +53,7 @@ final class IssueListTableViewCell: TableViewCell {
         
     }
     
-    override func addViews() {
+    override final func addViews() {
         contentView.addSubview(stackView)
         stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(descriptionLabel)
