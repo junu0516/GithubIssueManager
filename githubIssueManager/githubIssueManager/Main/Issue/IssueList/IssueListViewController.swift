@@ -71,7 +71,6 @@ final class IssueListViewController: UIViewController {
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalTo(view.safeAreaLayoutGuide)
         }
-     
     }
 }
 

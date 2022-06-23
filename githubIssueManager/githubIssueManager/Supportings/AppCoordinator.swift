@@ -11,6 +11,15 @@ final class AppCoordinator: Coordinator {
     private (set)var navigationController: UINavigationController?
     weak var delegate: AppCoordinatorDelegate?
 
+    @UserDefault(key: .authToken)
+    private var storedAccessToken: String
+    
+    var accessToken: String? {
+        didSet {
+            storedAccessToken = accessToken ?? ""
+        }
+    }
+    
     required init() {}
     
     func start() {
@@ -22,7 +31,7 @@ final class AppCoordinator: Coordinator {
     }
     
     private func isTokenAvailable() -> Bool {
-        return UserDefaults.standard.object(forKey: "Github_Access_Token") != nil
+        return !storedAccessToken.isEmpty
     }
     
     private func moveToViewController<T: Coordinator>(type: T.Type) {
@@ -35,15 +44,7 @@ final class AppCoordinator: Coordinator {
         Log.debug("move to \(type)")
     }
     
-    func setGithubAccessToken(token: String?) {
-        guard let token = token else {
-            Log.error("access token value nil")
-            return
-        }
-        
-        Log.debug("token: \(token)")
-        UserDefaults.standard.set(token, forKey: "Github_Access_Token")
-
+    func moveToMainViewController() {
         moveToViewController(type: MainCoordinator.self)
         delegate?.switchRootView(navigationController: navigationController)
     }

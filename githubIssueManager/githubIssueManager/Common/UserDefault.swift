@@ -11,7 +11,7 @@ struct UserDefault {
             return userDefault.string(forKey: key.value) ?? ""
         }
         set {
-            userDefault.set(key.value, forKey: newValue)
+            userDefault.set(newValue, forKey: key.value)
         }
     }
     

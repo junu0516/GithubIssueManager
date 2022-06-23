@@ -4,11 +4,14 @@ final class MockNetworkManager: NetworkManagable {
     
     enum MockData {
         case issues
+        case authentication
         
         var fileName: String {
             switch self {
             case .issues:
                 return "issues"
+            case .authentication:
+                return "authentication"
             }
         }
     }

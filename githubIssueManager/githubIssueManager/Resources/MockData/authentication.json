@@ -1,0 +1,6 @@
+{
+  "access_token":"mock_access_token",
+  "scope":"repo,gist",
+  "token_type":"bearer"
+}
+
