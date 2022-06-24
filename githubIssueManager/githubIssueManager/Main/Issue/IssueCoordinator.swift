@@ -22,5 +22,11 @@ final class IssueCoordinator: Coordinator {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
 }
+
+extension IssueCoordinator: IssueNavigation {
+    
+    func moveToIssueInsert() {
+        let viewController = IssueInsertViewController()
+        self.navigationController?.pushViewController(viewController, animated: true)
     }
 }

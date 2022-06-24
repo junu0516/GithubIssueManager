@@ -42,6 +42,7 @@
 		B53CFCAE285DDEB500C81EE3 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCAD285DDEB500C81EE3 /* Path.swift */; };
 		B53CFCB0285DDECC00C81EE3 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCAF285DDECC00C81EE3 /* HttpMethod.swift */; };
 		B53CFCB3285DFB4C00C81EE3 /* GithubKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */; };
+		B5714E1828655A1300EB1A54 /* IssueInsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5714E1728655A1300EB1A54 /* IssueInsertViewController.swift */; };
 		B5B7E7BC285E12630077E97D /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BB285E12630077E97D /* AuthRequest.swift */; };
 		B5B7E7BE285E16EC0077E97D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */; };
 		B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */; };
@@ -123,6 +124,7 @@
 		B53CFCAD285DDEB500C81EE3 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
 		B53CFCAF285DDECC00C81EE3 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GithubKeys.plist; sourceTree = "<group>"; };
+		B5714E1728655A1300EB1A54 /* IssueInsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInsertViewController.swift; sourceTree = "<group>"; };
 		B5B7E7BB285E12630077E97D /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
 		B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -331,6 +333,14 @@
 				B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		B5714E16286559EC00EB1A54 /* IssueInsert */ = {
+			isa = PBXGroup;
+			children = (
+				B5714E1728655A1300EB1A54 /* IssueInsertViewController.swift */,
+			);
+			path = IssueInsert;
 			sourceTree = "<group>";
 		};
 		B5B7E7BA285E12510077E97D /* Entities */ = {
@@ -638,6 +648,7 @@
 				B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */,
 				B53CFCB0285DDECC00C81EE3 /* HttpMethod.swift in Sources */,
 				B53CFCAC285DDE2600C81EE3 /* NetworkManagable.swift in Sources */,
+				B5714E1828655A1300EB1A54 /* IssueInsertViewController.swift in Sources */,
 				B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */,
 				B53CFCA8285D848E00C81EE3 /* LoginRepository.swift in Sources */,
 				B5036241285F833300F82C4E /* IssueCoordinator.swift in Sources */,

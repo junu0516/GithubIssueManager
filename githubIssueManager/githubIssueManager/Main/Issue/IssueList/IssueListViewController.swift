@@ -33,6 +33,18 @@ final class IssueListViewController: UIViewController {
         return button
     }()
     
+    private lazy var addButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("+", for: .normal)
+        button.setTitleColor(UIColor.white, for: .normal)
+        button.backgroundColor = .systemBlue
+        button.titleLabel?.textAlignment = .center
+        button.titleLabel?.font = .boldSystemFont(ofSize: 50)
+        button.clipsToBounds = true
+        button.layer.cornerRadius = self.view.frame.width*0.2/2
+        return button
+    }()
+    
     convenience init(viewModel: IssueListViewModel) {
         self.init()
         self.viewModel = viewModel
@@ -53,6 +65,10 @@ final class IssueListViewController: UIViewController {
             self?.issueDataSource.items = $0
             self?.issueTableView.reloadData()
         }
+        
+        addButton.tapped { [weak self] in
+            self?.viewModel?.input.addButtonTapped.value = true
+        }
     }
     
     private func setAttributes() {
@@ -70,6 +86,12 @@ final class IssueListViewController: UIViewController {
             $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
+        
+        view.addSubview(addButton)
+        addButton.snp.makeConstraints {
+            $0.bottom.trailing.equalTo(view.safeAreaLayoutGuide).inset(30)
+            $0.width.height.equalTo(view.snp.width).multipliedBy(0.2)
         }
     }
 }
