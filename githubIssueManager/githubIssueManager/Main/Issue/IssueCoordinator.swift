@@ -1,6 +1,11 @@
 import UIKit
 
-final class IssueViewCoordinator: Coordinator {
+protocol IssueNavigation: AnyObject {
+    
+    func moveToIssueInsert()
+}
+
+final class IssueCoordinator: Coordinator {
     
     weak var parentCoordinator: Coordinator?
     private (set)var childCoordinators: [Coordinator] = []
@@ -12,8 +17,10 @@ final class IssueViewCoordinator: Coordinator {
     }
     
     func start() {
-        let viewModel = IssueListViewModel()
+        let viewModel = IssueListViewModel(navigation: self)
         let viewController = IssueListViewController(viewModel: viewModel)
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+}
     }
 }
