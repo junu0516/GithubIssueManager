@@ -43,7 +43,7 @@
 		B53CFCB0285DDECC00C81EE3 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCAF285DDECC00C81EE3 /* HttpMethod.swift */; };
 		B53CFCB3285DFB4C00C81EE3 /* GithubKeys.plist in Resources */ = {isa = PBXBuildFile; fileRef = B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */; };
 		B5714E1828655A1300EB1A54 /* IssueInsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5714E1728655A1300EB1A54 /* IssueInsertViewController.swift */; };
-		B5714E1B2865ACEF00EB1A54 /* InsertField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5714E1A2865ACEF00EB1A54 /* InsertField.swift */; };
+		B5714E1B2865ACEF00EB1A54 /* IssueInsertField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5714E1A2865ACEF00EB1A54 /* IssueInsertField.swift */; };
 		B5714E1D2865AF5B00EB1A54 /* IssueInsertForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5714E1C2865AF5B00EB1A54 /* IssueInsertForm.swift */; };
 		B5714E1F2866F83B00EB1A54 /* IssueInsertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5714E1E2866F83B00EB1A54 /* IssueInsertViewModel.swift */; };
 		B5714E212866F91300EB1A54 /* IssueInsertRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5714E202866F91300EB1A54 /* IssueInsertRepository.swift */; };
@@ -135,7 +135,7 @@
 		B53CFCAF285DDECC00C81EE3 /* HttpMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
 		B53CFCB2285DFB4C00C81EE3 /* GithubKeys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GithubKeys.plist; sourceTree = "<group>"; };
 		B5714E1728655A1300EB1A54 /* IssueInsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInsertViewController.swift; sourceTree = "<group>"; };
-		B5714E1A2865ACEF00EB1A54 /* InsertField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertField.swift; sourceTree = "<group>"; };
+		B5714E1A2865ACEF00EB1A54 /* IssueInsertField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInsertField.swift; sourceTree = "<group>"; };
 		B5714E1C2865AF5B00EB1A54 /* IssueInsertForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInsertForm.swift; sourceTree = "<group>"; };
 		B5714E1E2866F83B00EB1A54 /* IssueInsertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInsertViewModel.swift; sourceTree = "<group>"; };
 		B5714E202866F91300EB1A54 /* IssueInsertRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInsertRepository.swift; sourceTree = "<group>"; };
@@ -370,7 +370,7 @@
 		B5714E192865ACE100EB1A54 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				B5714E1A2865ACEF00EB1A54 /* InsertField.swift */,
+				B5714E1A2865ACEF00EB1A54 /* IssueInsertField.swift */,
 				B5714E1C2865AF5B00EB1A54 /* IssueInsertForm.swift */,
 			);
 			path = Views;
@@ -691,7 +691,7 @@
 				B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */,
 				B53CFCB0285DDECC00C81EE3 /* HttpMethod.swift in Sources */,
 				B5BBCB292867017D00BA918E /* Assignee.swift in Sources */,
-				B5714E1B2865ACEF00EB1A54 /* InsertField.swift in Sources */,
+				B5714E1B2865ACEF00EB1A54 /* IssueInsertField.swift in Sources */,
 				B5BBCB272867005D00BA918E /* Label.swift in Sources */,
 				B53CFCAC285DDE2600C81EE3 /* NetworkManagable.swift in Sources */,
 				B5714E1828655A1300EB1A54 /* IssueInsertViewController.swift in Sources */,

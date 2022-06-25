@@ -28,8 +28,8 @@ final class IssueInsertViewController: UIViewController {
         return segmentView
     }()
     
-    private let titleView: InsertField = {
-        let insertField = InsertField()
+    private let titleView: IssueInsertField = {
+        let insertField = IssueInsertField()
         insertField.title = "제목"
         insertField.placeHolder = "제목을 입력하세요"
         insertField.backgroundColor = .white
@@ -41,8 +41,6 @@ final class IssueInsertViewController: UIViewController {
         insertForm.backgroundColor = .systemBackground
         return insertForm
     }()
-    
-    
     
     convenience init(viewModel: IssueInsertViewModel) {
         self.init()
@@ -59,6 +57,10 @@ final class IssueInsertViewController: UIViewController {
     
     private func bind() {
         viewModel?.input.repoInfoRequested.value = true
+        
+        saveButton.tapped { [weak self] in
+            self?.viewModel?.input.saveButtonTapped.value = true
+        }
     }
     
     private func addViews() {

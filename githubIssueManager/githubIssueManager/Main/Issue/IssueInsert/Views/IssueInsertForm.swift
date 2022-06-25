@@ -4,24 +4,24 @@ import UIKit
 final class IssueInsertForm: UIView {
     
     
-    let labelField: InsertField = {
-        let insertField = InsertField()
+    let labelField: IssueInsertField = {
+        let insertField = IssueInsertField()
         insertField.title = "레이블"
         insertField.backgroundColor = .white
         insertField.isTextingEnabled = false
         return insertField
     }()
     
-    let milestoneField: InsertField = {
-        let insertField = InsertField()
+    let milestoneField: IssueInsertField = {
+        let insertField = IssueInsertField()
         insertField.title = "마일스톤"
         insertField.backgroundColor = .white
         insertField.isTextingEnabled = false
         return insertField
     }()
     
-    let assigneeField: InsertField = {
-        let insertField = InsertField()
+    let assigneeField: IssueInsertField = {
+        let insertField = IssueInsertField()
         insertField.title = "담당자"
         insertField.backgroundColor = .white
         insertField.isTextingEnabled = false
