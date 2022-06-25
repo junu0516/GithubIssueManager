@@ -1,6 +1,6 @@
 import Foundation
 
-struct Milestone: Decodable {
+struct Milestone: Decodable, TitleValuePossessible {
     
     let title: String
 }
