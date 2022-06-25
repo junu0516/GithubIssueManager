@@ -1,6 +1,6 @@
 import Foundation
 
-protocol BasicViewModel {
+protocol BasicViewModel: AnyObject {
     associatedtype Input
     associatedtype Output
     
