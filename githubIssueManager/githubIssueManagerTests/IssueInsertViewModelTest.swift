@@ -38,13 +38,15 @@ class IssueInsertViewModelTest: XCTestCase {
         
         viewModel.input.repoInfoRequested.value = true
 
-        let assignees = try XCTUnwrap(viewModel.input.assignees.value)
-        let labels = try XCTUnwrap(viewModel.input.labels.value)
-        let milestones = try XCTUnwrap(viewModel.input.milestones.value)
+        let assignees = try XCTUnwrap(viewModel.output.assignees.value)
+        let labels = try XCTUnwrap(viewModel.output.labels.value)
+        let milestones = try XCTUnwrap(viewModel.output.milestones.value)
         
-        XCTAssertGreaterThan(assignees.count, 0)
-        XCTAssertGreaterThan(labels.count, 0)
-        XCTAssertGreaterThan(milestones.count, 0)
+        DispatchQueue.global(qos: .background).sync {
+            XCTAssertGreaterThan(assignees.count, 1)
+            XCTAssertGreaterThan(labels.count, 0)
+            XCTAssertGreaterThan(milestones.count, 0)
+        }
     }
 
     func test_fetching_repo_info_failure() throws {
@@ -56,8 +58,10 @@ class IssueInsertViewModelTest: XCTestCase {
         
         viewModel.input.repoInfoRequested.value = true
 
-        XCTAssertNil(viewModel.input.assignees.value)
-        XCTAssertNil(viewModel.input.labels.value)
-        XCTAssertNil(viewModel.input.milestones.value)
+        DispatchQueue.global(qos: .background).sync {
+            XCTAssertNil(viewModel.output.assignees.value)
+            XCTAssertNil(viewModel.output.labels.value)
+            XCTAssertNil(viewModel.output.milestones.value)
+        }
     }
 }

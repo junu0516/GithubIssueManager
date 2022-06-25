@@ -9,7 +9,11 @@ final class IssueInsertViewModel: BasicViewModel {
         let assignees = Observable<[Assignee]>()
     }
     
-    struct Output {}
+    struct Output {
+        let milestones = Observable<[Milestone]>()
+        let labels = Observable<[Label]>()
+        let assignees = Observable<[Assignee]>()
+    }
     
     let input = Input()
     let output = Output()
@@ -26,22 +30,23 @@ final class IssueInsertViewModel: BasicViewModel {
     private func bind() {
         input.repoInfoRequested.bind { [weak self] isRequested in
             guard isRequested == true else { return }
-            self?.fetchRepoInfo()
+            DispatchQueue.global(qos: .background).sync {
+                self?.fetchRepoInfo()
+            }
         }
         
-        input.milestones.bind { milestones in
-            Log.debug("\(milestones)")
+        input.milestones.bind { [weak self] milestones in
+            self?.output.milestones.value = milestones
         }
         
-        input.labels.bind { labels in
-            Log.debug("\(labels)")
+        input.labels.bind { [weak self] labels in
+            self?.output.labels.value = labels
         }
         
-        input.assignees.bind { assignees in
-            Log.debug("\(assignees)")
+        input.assignees.bind { [weak self] assignees in
+            self?.output.assignees.value = assignees
         }
     }
-    
     
     //담당자, 라벨, 마일스톤 리스트 요청
     private func fetchRepoInfo() {
