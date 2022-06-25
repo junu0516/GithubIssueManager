@@ -51,6 +51,10 @@
 		B5B7E7BE285E16EC0077E97D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */; };
 		B5BBCB272867005D00BA918E /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB262867005D00BA918E /* Label.swift */; };
 		B5BBCB292867017D00BA918E /* Assignee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB282867017D00BA918E /* Assignee.swift */; };
+		B5BBCB2B2867037000BA918E /* milestones.json in Resources */ = {isa = PBXBuildFile; fileRef = B5BBCB2A2867037000BA918E /* milestones.json */; };
+		B5BBCB2D286703AD00BA918E /* labels.json in Resources */ = {isa = PBXBuildFile; fileRef = B5BBCB2C286703AD00BA918E /* labels.json */; };
+		B5BBCB31286703DF00BA918E /* assignees.json in Resources */ = {isa = PBXBuildFile; fileRef = B5BBCB30286703DF00BA918E /* assignees.json */; };
+		B5BBCB332867040800BA918E /* IssueInsertViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB322867040800BA918E /* IssueInsertViewModelTest.swift */; };
 		B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */; };
 		B5D4807F2861E38D0069D16B /* IssueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */; };
 		B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480802861E3BF0069D16B /* TableViewCell.swift */; };
@@ -139,6 +143,10 @@
 		B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		B5BBCB262867005D00BA918E /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
 		B5BBCB282867017D00BA918E /* Assignee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignee.swift; sourceTree = "<group>"; };
+		B5BBCB2A2867037000BA918E /* milestones.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = milestones.json; sourceTree = "<group>"; };
+		B5BBCB2C286703AD00BA918E /* labels.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = labels.json; sourceTree = "<group>"; };
+		B5BBCB30286703DF00BA918E /* assignees.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = assignees.json; sourceTree = "<group>"; };
+		B5BBCB322867040800BA918E /* IssueInsertViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInsertViewModelTest.swift; sourceTree = "<group>"; };
 		B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListTableViewCell.swift; sourceTree = "<group>"; };
 		B5D480802861E3BF0069D16B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -256,6 +264,7 @@
 				B53CFC73285C23FD00C81EE3 /* IssueListViewModelTest.swift */,
 				B50950BC2864368700298AE3 /* LoginViewModelTest.swift */,
 				B50950C02864403300298AE3 /* AuthenticationTest.swift */,
+				B5BBCB322867040800BA918E /* IssueInsertViewModelTest.swift */,
 			);
 			path = githubIssueManagerTests;
 			sourceTree = "<group>";
@@ -405,6 +414,9 @@
 			children = (
 				B50950BE28643D0500298AE3 /* authentication.json */,
 				B5D48093286339260069D16B /* issues.json */,
+				B5BBCB2A2867037000BA918E /* milestones.json */,
+				B5BBCB2C286703AD00BA918E /* labels.json */,
+				B5BBCB30286703DF00BA918E /* assignees.json */,
 			);
 			path = MockData;
 			sourceTree = "<group>";
@@ -531,10 +543,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5BBCB31286703DF00BA918E /* assignees.json in Resources */,
 				B53CFCB3285DFB4C00C81EE3 /* GithubKeys.plist in Resources */,
 				B5D48094286339260069D16B /* issues.json in Resources */,
 				B53CFC69285C23FD00C81EE3 /* LaunchScreen.storyboard in Resources */,
+				B5BBCB2D286703AD00BA918E /* labels.json in Resources */,
 				B53CFC66285C23FD00C81EE3 /* Assets.xcassets in Resources */,
+				B5BBCB2B2867037000BA918E /* milestones.json in Resources */,
 				B50950BF28643D0500298AE3 /* authentication.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -717,6 +732,7 @@
 				B50950C12864403300298AE3 /* AuthenticationTest.swift in Sources */,
 				B50950BD2864368700298AE3 /* LoginViewModelTest.swift in Sources */,
 				B53CFC74285C23FD00C81EE3 /* IssueListViewModelTest.swift in Sources */,
+				B5BBCB332867040800BA918E /* IssueInsertViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
