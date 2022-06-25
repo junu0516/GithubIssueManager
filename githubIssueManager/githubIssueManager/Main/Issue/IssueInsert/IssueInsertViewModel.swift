@@ -26,10 +26,7 @@ final class IssueInsertViewModel: BasicViewModel {
     private func bind() {
         input.repoInfoRequested.bind { [weak self] isRequested in
             guard isRequested == true else { return }
-
-            DispatchQueue.global(qos: .background).async {
-                self?.fetchRepoInfo()
-            }
+            self?.fetchRepoInfo()
         }
         
         input.milestones.bind { milestones in
