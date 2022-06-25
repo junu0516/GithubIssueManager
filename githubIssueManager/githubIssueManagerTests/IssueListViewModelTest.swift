@@ -22,7 +22,6 @@ class IssueListViewModelTest: XCTestCase {
     // 이슈 리스트 불러오기 테스트
     func test_fetching_issues_success() throws {
         networkManager.shouldFail = false
-        networkManager.loadMockData(mockData: .issues)
 
         XCTAssertNil(viewModel.output.issueViewModels.value)
         
@@ -35,7 +34,6 @@ class IssueListViewModelTest: XCTestCase {
     
     func test_fetching_issues_failure() throws {
         networkManager.shouldFail = true
-        networkManager.loadMockData(mockData: .issues)
 
         XCTAssertNil(viewModel.output.issueViewModels.value)
         

@@ -20,11 +20,9 @@ class AuthenticationTest: XCTestCase {
         XCTAssertFalse(authRequest.clientSecret.isEmpty)
     }
     
-    func test_requesting_access_token() throws {
-        
+    func test_requesting_access_token() throws {        
         XCTAssertNil(deepLinkRouter.authToken.value)
         
-        networkManager.loadMockData(mockData: .authentication)
         networkManager.shouldFail = false
         deepLinkRouter.authCode.value = "someCode"
 
