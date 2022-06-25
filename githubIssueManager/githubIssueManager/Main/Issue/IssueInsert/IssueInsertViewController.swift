@@ -3,6 +3,8 @@ import SnapKit
 
 final class IssueInsertViewController: UIViewController {
     
+    private var viewModel: IssueInsertViewModel?
+    
     private let saveButton: UIButton = {
         let button = UIButton()
         button.setTitle("저장", for: .normal)
@@ -40,11 +42,23 @@ final class IssueInsertViewController: UIViewController {
         return insertForm
     }()
     
+    
+    
+    convenience init(viewModel: IssueInsertViewModel) {
+        self.init()
+        self.viewModel = viewModel
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setAttributes()
         addViews()
+        bind()
+    }
+    
+    private func bind() {
+        viewModel?.input.repoInfoRequested.value = true
     }
     
     private func addViews() {
@@ -52,22 +66,22 @@ final class IssueInsertViewController: UIViewController {
         view.addSubview(titleView)
         titleView.snp.makeConstraints {
             $0.top.equalTo(view.safeAreaLayoutGuide)
-            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.leading.trailing.equalToSuperview().inset(18)
             $0.height.equalToSuperview().multipliedBy(0.07)
         }
         
         view.addSubview(textView)
         textView.snp.makeConstraints {
             $0.top.equalTo(titleView.snp.bottom)
-            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.leading.trailing.equalToSuperview().inset(18)
             $0.height.equalToSuperview().multipliedBy(0.53)
         }
         
         view.addSubview(insertForm)
         insertForm.snp.makeConstraints {
             $0.top.equalTo(textView.snp.bottom)
-            $0.bottom.equalTo(view.safeAreaLayoutGuide)
-            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(10)
+            $0.leading.trailing.equalToSuperview().inset(18)
         }
     }
     
