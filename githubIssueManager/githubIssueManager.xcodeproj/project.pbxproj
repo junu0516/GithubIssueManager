@@ -47,6 +47,8 @@
 		B5714E1D2865AF5B00EB1A54 /* IssueInsertForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5714E1C2865AF5B00EB1A54 /* IssueInsertForm.swift */; };
 		B5B7E7BC285E12630077E97D /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BB285E12630077E97D /* AuthRequest.swift */; };
 		B5B7E7BE285E16EC0077E97D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */; };
+		B5BBCB272867005D00BA918E /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB262867005D00BA918E /* Label.swift */; };
+		B5BBCB292867017D00BA918E /* Assignee.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB282867017D00BA918E /* Assignee.swift */; };
 		B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */; };
 		B5D4807F2861E38D0069D16B /* IssueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */; };
 		B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480802861E3BF0069D16B /* TableViewCell.swift */; };
@@ -131,6 +133,8 @@
 		B5714E1C2865AF5B00EB1A54 /* IssueInsertForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInsertForm.swift; sourceTree = "<group>"; };
 		B5B7E7BB285E12630077E97D /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
 		B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
+		B5BBCB262867005D00BA918E /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
+		B5BBCB282867017D00BA918E /* Assignee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Assignee.swift; sourceTree = "<group>"; };
 		B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListTableViewCell.swift; sourceTree = "<group>"; };
 		B5D480802861E3BF0069D16B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -364,6 +368,8 @@
 				B5036236285F674C00F82C4E /* AuthResponse.swift */,
 				B5D4808828630E0E0069D16B /* Issue.swift */,
 				B5D4808A2863107C0069D16B /* Milestone.swift */,
+				B5BBCB262867005D00BA918E /* Label.swift */,
+				B5BBCB282867017D00BA918E /* Assignee.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -662,7 +668,9 @@
 				B53CFC92285C49B300C81EE3 /* Coordinator.swift in Sources */,
 				B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */,
 				B53CFCB0285DDECC00C81EE3 /* HttpMethod.swift in Sources */,
+				B5BBCB292867017D00BA918E /* Assignee.swift in Sources */,
 				B5714E1B2865ACEF00EB1A54 /* InsertField.swift in Sources */,
+				B5BBCB272867005D00BA918E /* Label.swift in Sources */,
 				B53CFCAC285DDE2600C81EE3 /* NetworkManagable.swift in Sources */,
 				B5714E1828655A1300EB1A54 /* IssueInsertViewController.swift in Sources */,
 				B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */,
