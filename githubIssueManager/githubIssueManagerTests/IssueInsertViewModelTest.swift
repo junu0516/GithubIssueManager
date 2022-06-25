@@ -43,7 +43,7 @@ class IssueInsertViewModelTest: XCTestCase {
         let milestones = try XCTUnwrap(viewModel.output.milestones.value)
         
         DispatchQueue.global(qos: .background).sync {
-            XCTAssertGreaterThan(assignees.count, 1)
+            XCTAssertGreaterThan(assignees.count, 0)
             XCTAssertGreaterThan(labels.count, 0)
             XCTAssertGreaterThan(milestones.count, 0)
         }
