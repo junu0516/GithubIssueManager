@@ -58,6 +58,16 @@ final class IssueListViewController: UIViewController {
         bind()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = false
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.prefersLargeTitles = true
+    }
+    
     private func bind() {
         viewModel?.input.issueListRequested.value = true
         
@@ -73,10 +83,10 @@ final class IssueListViewController: UIViewController {
     
     private func setAttributes() {
         title = "이슈"
-        navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.leftBarButtonItem = UIBarButtonItem(customView: filterButton)
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: selectButton)
         navigationItem.searchController = UISearchController()
+        navigationItem.hidesSearchBarWhenScrolling = false
     }
     
     private func addViews() {

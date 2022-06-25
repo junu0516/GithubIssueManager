@@ -18,7 +18,7 @@ final class IssueListViewModel: BasicViewModel {
     weak var navigation: IssueNavigation?
     
     init(repository: IssueListRepository = IssueListRepository(),
-         navigation: IssueNavigation) {
+         navigation: IssueNavigation? = nil) {
         self.repository = repository
         self.navigation = navigation
         bind()
