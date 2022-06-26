@@ -16,11 +16,14 @@ final class AdditionalInfoViewModel: BasicViewModel {
     let output = Output()
     
     private weak var navigation: IssueNavigation?
+    private let saveOperation: ([Int]) -> Void
     
     init(titles: [TitleValuePossessible],
-         navigation: IssueNavigation? = nil) {
+         navigation: IssueNavigation? = nil,
+         saveOperation: @escaping ([Int]) -> Void) {
         
         self.navigation = navigation
+        self.saveOperation = saveOperation
         bind(titles: titles)
     }
     
@@ -34,12 +37,13 @@ final class AdditionalInfoViewModel: BasicViewModel {
         
         input.saveButtonTapped.bind { [weak self] isTapped in
             guard isTapped == true else { return }
-            self?.navigation?.closeSelectView(selectedIndexList: self?.filterSelectedIndex() ?? [])
+            self?.navigation?.closeSelectView()
+            self?.saveOperation(self?.filterSelectedIndex() ?? [])
         }
         
         input.cancelButtonTapped.bind { [weak self] isTapped in
             guard isTapped == true else { return }
-            self?.navigation?.closeSelectView(selectedIndexList: [])
+            self?.navigation?.closeSelectView()
         }
     }
     
