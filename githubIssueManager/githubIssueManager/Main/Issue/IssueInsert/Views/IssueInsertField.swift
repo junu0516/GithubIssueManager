@@ -10,10 +10,20 @@ final class IssueInsertField: UIControl {
         return label
     }()
     
-    private let textField: UITextField = {
+    let textFieldDelegate = TextFieldDelegate()
+    private lazy var textField: UITextField = {
         let textField = UITextField()
+        textField.delegate = textFieldDelegate
         return textField
     }()
+    
+    var rightButton: UIButton? {
+        didSet {
+            textField.rightViewMode = .always
+            textField.rightView = rightButton
+            textField.rightView?.tintColor = .gray
+        }
+    }
     
     var title: String? {
         didSet {
@@ -74,7 +84,7 @@ final class IssueInsertField: UIControl {
         textField.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
             $0.leading.equalTo(titleLabel.snp.trailing)
-            $0.trailing.equalToSuperview().inset(20)
+            $0.trailing.equalToSuperview().inset(10)
             $0.bottom.equalToSuperview().offset(-10)
         }
     }

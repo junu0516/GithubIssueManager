@@ -3,7 +3,6 @@ import UIKit
 
 final class IssueInsertForm: UIView {
     
-    
     let labelField: IssueInsertField = {
         let insertField = IssueInsertField()
         insertField.title = "레이블"
@@ -11,6 +10,11 @@ final class IssueInsertForm: UIView {
         insertField.isTextingEnabled = false
         insertField.textAlignment = .right
         insertField.textColor = .gray
+        
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.sizeToFit()
+        insertField.rightButton = button
         return insertField
     }()
     
@@ -21,9 +25,14 @@ final class IssueInsertForm: UIView {
         insertField.isTextingEnabled = false
         insertField.textAlignment = .right
         insertField.textColor = .gray
+        
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.sizeToFit()
+        insertField.rightButton = button
         return insertField
     }()
-    
+
     let assigneeField: IssueInsertField = {
         let insertField = IssueInsertField()
         insertField.title = "담당자"
@@ -31,6 +40,11 @@ final class IssueInsertForm: UIView {
         insertField.isTextingEnabled = false
         insertField.textAlignment = .right
         insertField.textColor = .gray
+        
+        let button = UIButton()
+        button.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        button.sizeToFit()
+        insertField.rightButton = button
         return insertField
     }()
     
@@ -62,5 +76,4 @@ final class IssueInsertForm: UIView {
             $0.top.bottom.leading.trailing.equalToSuperview()
         }
     }
-    
 }
