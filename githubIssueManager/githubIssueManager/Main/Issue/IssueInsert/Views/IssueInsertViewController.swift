@@ -58,8 +58,16 @@ final class IssueInsertViewController: UIViewController {
     private func bind() {
         viewModel?.input.repoInfoRequested.value = true
         
-        saveButton.tapped { [weak self] in
-            self?.viewModel?.input.saveButtonTapped.value = true
+        insertForm.milestoneField.tapped { [weak self] in
+            self?.viewModel?.input.milestoneFiledTapped.value = true
+        }
+        
+        insertForm.labelField.tapped { [weak self] in
+            self?.viewModel?.input.labelFieldTapped.value = true
+        }
+        
+        insertForm.assigneeField.tapped { [weak self] in
+            self?.viewModel?.input.assigneeFiledTapped.value = true
         }
     }
     

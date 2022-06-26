@@ -1,7 +1,7 @@
 import SnapKit
 import UIKit
 
-final class IssueInsertField: UIView {
+final class IssueInsertField: UIControl {
     
     private let titleLabel: UILabel = {
         let label = UILabel()

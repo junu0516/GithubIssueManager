@@ -34,7 +34,7 @@
 		B53CFC9B285C6CEE00C81EE3 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC9A285C6CEE00C81EE3 /* LoginViewModel.swift */; };
 		B53CFC9D285C6F1400C81EE3 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFC9C285C6F1400C81EE3 /* NetworkManager.swift */; };
 		B53CFCA1285C757A00C81EE3 /* BasicViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */; };
-		B53CFCA4285C78A300C81EE3 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA3285C78A300C81EE3 /* UIButton+Extension.swift */; };
+		B53CFCA4285C78A300C81EE3 /* UIControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA3285C78A300C81EE3 /* UIControl+Extension.swift */; };
 		B53CFCA6285D815900C81EE3 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA5285D815900C81EE3 /* Observable.swift */; };
 		B53CFCA8285D848E00C81EE3 /* LoginRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA7285D848E00C81EE3 /* LoginRepository.swift */; };
 		B53CFCAA285DDD4000C81EE3 /* NetworkTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = B53CFCA9285DDD4000C81EE3 /* NetworkTarget.swift */; };
@@ -131,7 +131,7 @@
 		B53CFC9A285C6CEE00C81EE3 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		B53CFC9C285C6F1400C81EE3 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicViewModel.swift; sourceTree = "<group>"; };
-		B53CFCA3285C78A300C81EE3 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		B53CFCA3285C78A300C81EE3 /* UIControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIControl+Extension.swift"; sourceTree = "<group>"; };
 		B53CFCA5285D815900C81EE3 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 		B53CFCA7285D848E00C81EE3 /* LoginRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRepository.swift; sourceTree = "<group>"; };
 		B53CFCA9285DDD4000C81EE3 /* NetworkTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTarget.swift; sourceTree = "<group>"; };
@@ -351,7 +351,7 @@
 		B53CFCA2285C789700C81EE3 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				B53CFCA3285C78A300C81EE3 /* UIButton+Extension.swift */,
+				B53CFCA3285C78A300C81EE3 /* UIControl+Extension.swift */,
 				B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */,
 				B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */,
 			);
@@ -371,7 +371,6 @@
 			isa = PBXGroup;
 			children = (
 				B5714E192865ACE100EB1A54 /* Views */,
-				B5714E1728655A1300EB1A54 /* IssueInsertViewController.swift */,
 				B5714E1E2866F83B00EB1A54 /* IssueInsertViewModel.swift */,
 				B5714E202866F91300EB1A54 /* IssueInsertRepository.swift */,
 			);
@@ -383,6 +382,7 @@
 			children = (
 				B5714E1A2865ACEF00EB1A54 /* IssueInsertField.swift */,
 				B5714E1C2865AF5B00EB1A54 /* IssueInsertForm.swift */,
+				B5714E1728655A1300EB1A54 /* IssueInsertViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -735,7 +735,7 @@
 				B53CFC96285C5A2200C81EE3 /* LoginCoordinator.swift in Sources */,
 				B53CFC5D285C23FB00C81EE3 /* AppDelegate.swift in Sources */,
 				B5BBCB3D2867585600BA918E /* AdditionalInfoViewModel.swift in Sources */,
-				B53CFCA4285C78A300C81EE3 /* UIButton+Extension.swift in Sources */,
+				B53CFCA4285C78A300C81EE3 /* UIControl+Extension.swift in Sources */,
 				B5036233285E575A00F82C4E /* ObjectConverter.swift in Sources */,
 				B5B7E7BE285E16EC0077E97D /* Bundle+Extension.swift in Sources */,
 				B5BBCB3F286761C600BA918E /* TitleValuePossessible.swift in Sources */,

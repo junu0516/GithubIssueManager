@@ -13,7 +13,7 @@ final class IssueListViewController: UIViewController {
         tableView.dataSource = issueDataSource
         return tableView
     }()
-    private let issueDataSource = TableViewDataSource.create()
+    private let issueDataSource = TableViewDataSource<IssueListTableViewCell,IssueListTableViewCellModel>.create()
     
     private let filterButton: UIButton = {
         let button = UIButton()

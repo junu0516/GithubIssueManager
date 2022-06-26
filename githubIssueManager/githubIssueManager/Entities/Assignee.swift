@@ -1,6 +1,10 @@
 import Foundation
 
-struct Assignee: Decodable {
+struct Assignee: Decodable, TitleValuePossessible {
     
-    let login: String
+    let title: String
+    
+    enum CodingKeys: String, CodingKey {
+        case title = "login"
+    }
 }
