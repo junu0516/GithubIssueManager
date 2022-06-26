@@ -14,11 +14,13 @@ final class IssueInsertViewController: UIViewController {
         return button
     }()
     
-    private let textView: UITextView = {
+    private let textViewDelegate = TextViewDelegate()
+    private lazy var textView: UITextView = {
         let textView = UITextView()
         textView.font = UIFont.systemFont(ofSize: 18)
         textView.layer.borderColor = UIColor.lightGray.cgColor
         textView.layer.borderWidth = 0.5
+        textView.delegate = textViewDelegate
         return textView
     }()
     
@@ -84,6 +86,19 @@ final class IssueInsertViewController: UIViewController {
             let text = milestones.reduce(""){ $0 + ", " + $1.title }
             self?.insertForm.milestoneField.text = String(text.dropFirst())
         }
+        
+        saveButton.tapped { [weak self] in
+            self?.viewModel?.input.saveButtonTapped.value = true
+        }
+        
+        textViewDelegate.updatedText.bind { [weak self] text in
+            self?.viewModel?.input.bodyUpdated.value = text
+        }
+        
+        titleView.textFieldDelegate.updatedText.bind { [weak self] text in
+            self?.viewModel?.input.titleUpdated.value = text
+        }
+        
     }
     
     private func addViews() {

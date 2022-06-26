@@ -11,12 +11,16 @@ final class IssueInsertViewModel: BasicViewModel {
         let labelFieldTapped = Observable<Bool>()
         let milestoneFieldTapped = Observable<Bool>()
         let assigneeFieldTapped = Observable<Bool>()
+        let titleUpdated = Observable<String>()
+        let bodyUpdated = Observable<String>()
     }
     
     struct Output {
         let selectedMilestones = Observable<[Milestone]>()
         let selectedLabels = Observable<[Label]>()
         let selectedAssignees = Observable<[Assignee]>()
+        let updatedTitle = Observable<String>()
+        let updatedBody = Observable<String>()
     }
     
     let input = Input()
@@ -62,6 +66,19 @@ final class IssueInsertViewModel: BasicViewModel {
                 self?.saveSelectedInfo(infoType: .assignee, selectedIndexList: selectedIndexList)
             }
         }
+        
+        input.titleUpdated.bind { [weak self] titleText in
+            self?.output.updatedTitle.value = titleText
+        }
+        
+        input.bodyUpdated.bind { [weak self] bodyText in
+            self?.output.updatedBody.value = bodyText
+        }
+        
+        input.saveButtonTapped.bind { [weak self] isTapped in
+            guard isTapped == true else { return }
+            self?.requestAddingIssue()
+        }
     }
     
     private func fetchRepoInfo() {
@@ -87,6 +104,20 @@ final class IssueInsertViewModel: BasicViewModel {
             updateSelectedLabels(selectedIndexList: selectedIndexList)
         case .assignee:
             updateSelectedAssignees(selectedIndexList: selectedIndexList)
+        }
+    }
+    
+    private func requestAddingIssue() {
+        
+        guard let labels = output.selectedLabels.value,
+              let assignees = output.selectedAssignees.value,
+              let milestone = output.selectedMilestones.value?[0],
+              let title = output.updatedTitle.value,
+              let body = output.updatedBody.value else { return }
+        
+        let issueRequest = IssueRequest(title: title , body: body, labels: labels, assignees: assignees, milestone: milestone)
+        repository.requestAddingIssue(issue: issueRequest) {
+            Log.debug("success")
         }
     }
 }
