@@ -1,6 +1,10 @@
 import Foundation
 
-struct Label: Decodable {
+struct Label: Decodable, TitleValuePossessible {
     
-    let name: String
+    let title: String
+    
+    enum CodingKeys: String, CodingKey {
+        case title = "name"
+    }
 }
