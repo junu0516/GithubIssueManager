@@ -38,9 +38,9 @@ class IssueInsertViewModelTest: XCTestCase {
         
         viewModel.input.repoInfoRequested.value = true
 
-        let assignees = try XCTUnwrap(viewModel.output.assignees.value)
-        let labels = try XCTUnwrap(viewModel.output.labels.value)
-        let milestones = try XCTUnwrap(viewModel.output.milestones.value)
+        let assignees = try XCTUnwrap(viewModel.input.assignees.value)
+        let labels = try XCTUnwrap(viewModel.input.labels.value)
+        let milestones = try XCTUnwrap(viewModel.input.milestones.value)
         
         DispatchQueue.global(qos: .background).sync {
             XCTAssertGreaterThan(assignees.count, 0)

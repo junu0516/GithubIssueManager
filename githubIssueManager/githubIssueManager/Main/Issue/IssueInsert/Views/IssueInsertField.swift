@@ -39,6 +39,18 @@ final class IssueInsertField: UIControl {
         }
     }
     
+    var textAlignment: NSTextAlignment = .left {
+        didSet {
+            textField.textAlignment = textAlignment
+        }
+    }
+    
+    var textColor: UIColor = .black {
+        didSet {
+            textField.textColor = textColor
+        }
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: .zero)
         addViews()
@@ -62,7 +74,7 @@ final class IssueInsertField: UIControl {
         textField.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
             $0.leading.equalTo(titleLabel.snp.trailing)
-            $0.trailing.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(20)
             $0.bottom.equalToSuperview().offset(-10)
         }
     }

@@ -9,6 +9,8 @@ final class IssueInsertForm: UIView {
         insertField.title = "레이블"
         insertField.backgroundColor = .white
         insertField.isTextingEnabled = false
+        insertField.textAlignment = .right
+        insertField.textColor = .gray
         return insertField
     }()
     
@@ -17,6 +19,8 @@ final class IssueInsertForm: UIView {
         insertField.title = "마일스톤"
         insertField.backgroundColor = .white
         insertField.isTextingEnabled = false
+        insertField.textAlignment = .right
+        insertField.textColor = .gray
         return insertField
     }()
     
@@ -25,6 +29,8 @@ final class IssueInsertForm: UIView {
         insertField.title = "담당자"
         insertField.backgroundColor = .white
         insertField.isTextingEnabled = false
+        insertField.textAlignment = .right
+        insertField.textColor = .gray
         return insertField
     }()
     

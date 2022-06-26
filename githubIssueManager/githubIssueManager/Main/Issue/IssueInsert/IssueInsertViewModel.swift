@@ -9,14 +9,14 @@ final class IssueInsertViewModel: BasicViewModel {
         let assignees = Observable<[Assignee]>()
         let saveButtonTapped = Observable<Bool>()
         let labelFieldTapped = Observable<Bool>()
-        let milestoneFiledTapped = Observable<Bool>()
-        let assigneeFiledTapped = Observable<Bool>()
+        let milestoneFieldTapped = Observable<Bool>()
+        let assigneeFieldTapped = Observable<Bool>()
     }
     
     struct Output {
-        let milestones = Observable<[Milestone]>()
-        let labels = Observable<[Label]>()
-        let assignees = Observable<[Assignee]>()
+        let selectedMilestones = Observable<[Milestone]>()
+        let selectedLabels = Observable<[Label]>()
+        let selectedAssignees = Observable<[Assignee]>()
     }
     
     let input = Input()
@@ -39,44 +39,31 @@ final class IssueInsertViewModel: BasicViewModel {
             }
         }
         
-        input.milestones.bind { [weak self] milestones in
-            self?.output.milestones.value = milestones
-        }
-        
-        input.labels.bind { [weak self] labels in
-            self?.output.labels.value = labels
-        }
-        
-        input.assignees.bind { [weak self] assignees in
-            self?.output.assignees.value = assignees
-        }
-        
-        input.milestoneFiledTapped.bind { [weak self] isTapped in
+        input.milestoneFieldTapped.bind { [weak self] isTapped in
             guard isTapped == true else { return }
-            let milestones = self?.output.milestones.value ?? []
+            let milestones = self?.input.milestones.value ?? []
             self?.navigation?.showInfoSelectView(models: milestones) { selectedIndexList in
-                self?.saveSelectedInfo(selectedIndexList: selectedIndexList)
+                self?.saveSelectedInfo(infoType: .milestone, selectedIndexList: selectedIndexList)
             }
         }
         
         input.labelFieldTapped.bind { [weak self] isTapped in
             guard isTapped == true else { return }
-            let labels = self?.output.labels.value ?? []
+            let labels = self?.input.labels.value ?? []
             self?.navigation?.showInfoSelectView(models: labels) { selectedIndexList in
-                self?.saveSelectedInfo(selectedIndexList: selectedIndexList)
+                self?.saveSelectedInfo(infoType: .label, selectedIndexList: selectedIndexList)
             }
         }
         
-        input.assigneeFiledTapped.bind { [weak self] isTapped in
+        input.assigneeFieldTapped.bind { [weak self] isTapped in
             guard isTapped == true else { return }
-            let assignees = self?.output.assignees.value ?? []
+            let assignees = self?.input.assignees.value ?? []
             self?.navigation?.showInfoSelectView(models: assignees) { selectedIndexList in
-                self?.saveSelectedInfo(selectedIndexList: selectedIndexList)
+                self?.saveSelectedInfo(infoType: .assignee, selectedIndexList: selectedIndexList)
             }
         }
     }
     
-    //담당자, 라벨, 마일스톤 리스트 요청
     private func fetchRepoInfo() {
         repository.requestLabels { [weak self] labels in
             self?.input.labels.value = labels
@@ -91,7 +78,42 @@ final class IssueInsertViewModel: BasicViewModel {
         }
     }
     
-    private func saveSelectedInfo(selectedIndexList: [Int]) {
-        Log.debug("selected index : \(selectedIndexList)")
+    private func saveSelectedInfo(infoType:InfoType, selectedIndexList: [Int]) {
+        
+        switch infoType {
+        case .milestone:
+            updateSelectedMilestones(selectedIndexList: selectedIndexList)
+        case .label:
+            updateSelectedLabels(selectedIndexList: selectedIndexList)
+        case .assignee:
+            updateSelectedAssignees(selectedIndexList: selectedIndexList)
+        }
+    }
+}
+
+extension IssueInsertViewModel {
+    
+    private enum InfoType {
+        case milestone
+        case label
+        case assignee
+    }
+
+    private func updateSelectedMilestones(selectedIndexList: [Int]) {
+        guard let milestones = input.milestones.value else { return }
+        let selected = selectedIndexList.map { milestones[$0] }
+        output.selectedMilestones.value = selected
+    }
+    
+    private func updateSelectedLabels(selectedIndexList: [Int]) {
+        guard let labels = input.labels.value else { return }
+        let selected = selectedIndexList.map { labels[$0] }
+        output.selectedLabels.value = selected
+    }
+    
+    private func updateSelectedAssignees(selectedIndexList: [Int]) {
+        guard let assignees = input.assignees.value else { return }
+        let selected = selectedIndexList.map { assignees[$0] }
+        output.selectedAssignees.value = selected
     }
 }

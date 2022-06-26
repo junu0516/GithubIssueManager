@@ -51,8 +51,8 @@ final class AdditionalInfoViewModel: BasicViewModel {
         guard let cellViewModels = output.infoViewModels.value else { return [] }
         
         return cellViewModels.enumerated()
-                             .filter { (index, viewModel) -> Bool in
-                                 return viewModel.output.isSelected.value ?? false
+                             .filter { (_, viewModel) -> Bool in
+                                 viewModel.output.isSelected.value ?? false
                              }
                              .map { $0.offset}
     }

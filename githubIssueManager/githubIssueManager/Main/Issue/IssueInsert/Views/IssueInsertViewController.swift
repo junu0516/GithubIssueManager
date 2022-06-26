@@ -59,7 +59,7 @@ final class IssueInsertViewController: UIViewController {
         viewModel?.input.repoInfoRequested.value = true
         
         insertForm.milestoneField.tapped { [weak self] in
-            self?.viewModel?.input.milestoneFiledTapped.value = true
+            self?.viewModel?.input.milestoneFieldTapped.value = true
         }
         
         insertForm.labelField.tapped { [weak self] in
@@ -67,7 +67,22 @@ final class IssueInsertViewController: UIViewController {
         }
         
         insertForm.assigneeField.tapped { [weak self] in
-            self?.viewModel?.input.assigneeFiledTapped.value = true
+            self?.viewModel?.input.assigneeFieldTapped.value = true
+        }
+        
+        viewModel?.output.selectedLabels.bind { [weak self] labels in
+            let text = labels.reduce(""){ $0 + ", " + $1.title }
+            self?.insertForm.labelField.text = String(text.dropFirst())
+        }
+        
+        viewModel?.output.selectedAssignees.bind { [weak self] assignees in
+            let text = assignees.reduce(""){ $0 + ", " + $1.title }
+            self?.insertForm.assigneeField.text = String(text.dropFirst())
+        }
+        
+        viewModel?.output.selectedMilestones.bind { [weak self] milestones in
+            let text = milestones.reduce(""){ $0 + ", " + $1.title }
+            self?.insertForm.milestoneField.text = String(text.dropFirst())
         }
     }
     
