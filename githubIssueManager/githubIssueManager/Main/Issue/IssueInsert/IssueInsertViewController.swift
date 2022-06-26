@@ -24,6 +24,15 @@ final class IssueInsertViewController: UIViewController {
         return textView
     }()
     
+    private let additionalInfoLabel: UILabel = {
+        let label = UILabel()
+        label.text = "추가 정보"
+        label.font = UIFont.boldSystemFont(ofSize: 22)
+        label.sizeToFit()
+        label.numberOfLines = 1
+        return label
+    }()
+    
     private let segmentView: UISegmentedControl = {
         let segmentView = UISegmentedControl(items: ["마크다운","미리보기"])
         segmentView.selectedSegmentIndex = 0
@@ -114,12 +123,19 @@ final class IssueInsertViewController: UIViewController {
         textView.snp.makeConstraints {
             $0.top.equalTo(titleView.snp.bottom)
             $0.leading.trailing.equalToSuperview().inset(18)
-            $0.height.equalToSuperview().multipliedBy(0.53)
+            $0.height.equalToSuperview().multipliedBy(0.43)
+        }
+        
+        view.addSubview(additionalInfoLabel)
+        additionalInfoLabel.snp.makeConstraints {
+            $0.top.equalTo(textView.snp.bottom)
+            $0.leading.trailing.equalToSuperview().inset(18)
+            $0.height.equalToSuperview().multipliedBy(0.07)
         }
         
         view.addSubview(insertForm)
         insertForm.snp.makeConstraints {
-            $0.top.equalTo(textView.snp.bottom)
+            $0.top.equalTo(additionalInfoLabel.snp.bottom)
             $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(10)
             $0.leading.trailing.equalToSuperview().inset(18)
         }
@@ -129,6 +145,10 @@ final class IssueInsertViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: saveButton)
         navigationItem.titleView = segmentView
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
     }
 }
 
