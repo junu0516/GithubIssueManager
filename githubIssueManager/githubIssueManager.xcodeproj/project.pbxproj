@@ -381,6 +381,7 @@
 				B5714E192865ACE100EB1A54 /* Views */,
 				B5714E1E2866F83B00EB1A54 /* IssueInsertViewModel.swift */,
 				B5714E202866F91300EB1A54 /* IssueInsertRepository.swift */,
+				B5714E1728655A1300EB1A54 /* IssueInsertViewController.swift */,
 			);
 			path = IssueInsert;
 			sourceTree = "<group>";
@@ -390,7 +391,6 @@
 			children = (
 				B5714E1A2865ACEF00EB1A54 /* IssueInsertField.swift */,
 				B5714E1C2865AF5B00EB1A54 /* IssueInsertForm.swift */,
-				B5714E1728655A1300EB1A54 /* IssueInsertViewController.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
