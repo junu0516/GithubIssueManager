@@ -72,7 +72,7 @@ final class MockNetworkManager: NetworkManagable {
             return
         case .githubAccessToken:
             loadMockData(mockData: .authentication)
-        case .githubIssues(_,_):
+        case .issues(_,_):
             loadMockData(mockData: .issues)
         case .milestones(_,_):
             loadMockData(mockData: .milestones)

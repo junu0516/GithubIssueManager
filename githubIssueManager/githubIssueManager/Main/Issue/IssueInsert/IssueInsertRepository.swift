@@ -70,4 +70,23 @@ struct IssueInsertRepository {
             }
         }
     }
+    
+    func requestAddingIssue(issue: IssueRequest, completion: @escaping () -> Void) {
+        
+        guard let target = NetworkTarget(path: .issues(owner: "junu0516", repo: "GithubIssueManager"),
+                                         method: .post,
+                                         paramteterType: .json,
+                                         headers: ["Accept":"application/vnd.github.v3+json",
+                                                   "Authorization":"token \(accessToken)"]) else { return }
+        
+        networkManager.request(target: target, parameters: issue) { result in
+            
+            switch result {
+            case .success(_):
+                completion()
+            case .failure(let error):
+                Log.error("\(error.localizedDescription)")
+            }
+        }
+    }
 }
