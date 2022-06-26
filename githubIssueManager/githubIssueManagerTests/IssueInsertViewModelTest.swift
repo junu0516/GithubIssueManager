@@ -59,9 +59,9 @@ class IssueInsertViewModelTest: XCTestCase {
         viewModel.input.repoInfoRequested.value = true
 
         DispatchQueue.global(qos: .background).sync {
-            XCTAssertNil(viewModel.output.assignees.value)
-            XCTAssertNil(viewModel.output.labels.value)
-            XCTAssertNil(viewModel.output.milestones.value)
+            XCTAssertNil(viewModel.input.assignees.value)
+            XCTAssertNil(viewModel.input.labels.value)
+            XCTAssertNil(viewModel.input.milestones.value)
         }
     }
 }

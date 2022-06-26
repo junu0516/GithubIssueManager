@@ -329,16 +329,9 @@
 		B53CFC97285C61F700C81EE3 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				B5BBCB492868CFD400BA918E /* ViewComponents */,
+				B5BBCB482868CFB500BA918E /* Utils */,
 				B53CFCA2285C789700C81EE3 /* Extensions */,
-				B53CFC98285C620100C81EE3 /* Logger.swift */,
-				B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */,
-				B53CFCA5285D815900C81EE3 /* Observable.swift */,
-				B5036232285E575A00F82C4E /* ObjectConverter.swift */,
-				B5D480802861E3BF0069D16B /* TableViewCell.swift */,
-				B5D480842861E5DE0069D16B /* TableViewDataSource.swift */,
-				B5D4808E286327550069D16B /* UserDefault.swift */,
-				B5BBCB442868C33600BA918E /* TextViewDelegate.swift */,
-				B5BBCB462868CB3000BA918E /* TextFieldDelegate.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -427,6 +420,29 @@
 				B5BBCB362867487F00BA918E /* AdditionalInfoTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B5BBCB482868CFB500BA918E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				B53CFCA5285D815900C81EE3 /* Observable.swift */,
+				B5036232285E575A00F82C4E /* ObjectConverter.swift */,
+				B53CFC98285C620100C81EE3 /* Logger.swift */,
+				B5D4808E286327550069D16B /* UserDefault.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		B5BBCB492868CFD400BA918E /* ViewComponents */ = {
+			isa = PBXGroup;
+			children = (
+				B5D480802861E3BF0069D16B /* TableViewCell.swift */,
+				B5D480842861E5DE0069D16B /* TableViewDataSource.swift */,
+				B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */,
+				B5BBCB462868CB3000BA918E /* TextFieldDelegate.swift */,
+				B5BBCB442868C33600BA918E /* TextViewDelegate.swift */,
+			);
+			path = ViewComponents;
 			sourceTree = "<group>";
 		};
 		B5D4807A2861DEEE0069D16B /* IssueList */ = {
