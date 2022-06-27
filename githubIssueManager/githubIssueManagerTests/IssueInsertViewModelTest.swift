@@ -70,7 +70,7 @@ class IssueInsertViewModelTest: XCTestCase {
         
         XCTAssertNil(viewModel.output.issueInsertResult.value)
         
-        viewModel.output.selectedLabels.value = [Label(title: "label")]
+        viewModel.output.selectedLabels.value = [Label(title: "label", description: "description", color: "FFFFFF")]
         viewModel.output.selectedAssignees.value = [Assignee(title: "assignee")]
         viewModel.output.selectedMilestones.value = [Milestone(title: "milestone", number: 0)]
         viewModel.output.updatedTitle.value = "title"
@@ -86,7 +86,7 @@ class IssueInsertViewModelTest: XCTestCase {
         
         XCTAssertNil(viewModel.output.issueInsertResult.value)
         
-        viewModel.output.selectedLabels.value = [Label(title: "label")]
+        viewModel.output.selectedLabels.value = [Label(title: "label", description: "description", color: "FFFFFF")]
         viewModel.output.selectedAssignees.value = [Assignee(title: "assignee")]
         viewModel.output.selectedMilestones.value = [Milestone(title: "milestone", number: 0)]
         viewModel.output.updatedTitle.value = "title"

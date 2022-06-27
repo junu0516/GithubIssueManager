@@ -63,6 +63,15 @@
 		B5BBCB432868BAFD00BA918E /* IssueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB422868BAFD00BA918E /* IssueRequest.swift */; };
 		B5BBCB452868C33700BA918E /* TextViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB442868C33600BA918E /* TextViewDelegate.swift */; };
 		B5BBCB472868CB3000BA918E /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB462868CB3000BA918E /* TextFieldDelegate.swift */; };
+		B5BBCB4C2869985E00BA918E /* LabelCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB4B2869985E00BA918E /* LabelCoordinator.swift */; };
+		B5BBCB4F28699A3D00BA918E /* LabelListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB4E28699A3D00BA918E /* LabelListViewController.swift */; };
+		B5BBCB522869A76A00BA918E /* LabelListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB512869A76A00BA918E /* LabelListTableViewCell.swift */; };
+		B5BBCB542869AB9800BA918E /* LabelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB532869AB9800BA918E /* LabelListViewModel.swift */; };
+		B5BBCB562869AC8600BA918E /* LabelListTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB552869AC8600BA918E /* LabelListTableViewCellModel.swift */; };
+		B5BBCB582869B9F900BA918E /* LabelListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB572869B9F900BA918E /* LabelListRepository.swift */; };
+		B5BBCB5A2869C0C500BA918E /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB592869C0C500BA918E /* PaddingLabel.swift */; };
+		B5BBCB5C2869C19400BA918E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB5B2869C19400BA918E /* String+Extension.swift */; };
+		B5BBCB5E2869CA4600BA918E /* LabelListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB5D2869CA4600BA918E /* LabelListViewModelTest.swift */; };
 		B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */; };
 		B5D4807F2861E38D0069D16B /* IssueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */; };
 		B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480802861E3BF0069D16B /* TableViewCell.swift */; };
@@ -163,6 +172,15 @@
 		B5BBCB422868BAFD00BA918E /* IssueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueRequest.swift; sourceTree = "<group>"; };
 		B5BBCB442868C33600BA918E /* TextViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewDelegate.swift; sourceTree = "<group>"; };
 		B5BBCB462868CB3000BA918E /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
+		B5BBCB4B2869985E00BA918E /* LabelCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCoordinator.swift; sourceTree = "<group>"; };
+		B5BBCB4E28699A3D00BA918E /* LabelListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListViewController.swift; sourceTree = "<group>"; };
+		B5BBCB512869A76A00BA918E /* LabelListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListTableViewCell.swift; sourceTree = "<group>"; };
+		B5BBCB532869AB9800BA918E /* LabelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListViewModel.swift; sourceTree = "<group>"; };
+		B5BBCB552869AC8600BA918E /* LabelListTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListTableViewCellModel.swift; sourceTree = "<group>"; };
+		B5BBCB572869B9F900BA918E /* LabelListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListRepository.swift; sourceTree = "<group>"; };
+		B5BBCB592869C0C500BA918E /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		B5BBCB5B2869C19400BA918E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B5BBCB5D2869CA4600BA918E /* LabelListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListViewModelTest.swift; sourceTree = "<group>"; };
 		B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListTableViewCell.swift; sourceTree = "<group>"; };
 		B5D480802861E3BF0069D16B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -220,6 +238,7 @@
 			children = (
 				B503623B285F6A3500F82C4E /* MainCoordinator.swift */,
 				B503623F285F808F00F82C4E /* Issue */,
+				B5BBCB4A2869984C00BA918E /* Label */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -282,6 +301,7 @@
 				B50950BC2864368700298AE3 /* LoginViewModelTest.swift */,
 				B50950C02864403300298AE3 /* AuthenticationTest.swift */,
 				B5BBCB322867040800BA918E /* IssueInsertViewModelTest.swift */,
+				B5BBCB5D2869CA4600BA918E /* LabelListViewModelTest.swift */,
 			);
 			path = githubIssueManagerTests;
 			sourceTree = "<group>";
@@ -355,6 +375,7 @@
 				B53CFCA3285C78A300C81EE3 /* UIControl+Extension.swift */,
 				B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */,
 				B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */,
+				B5BBCB5B2869C19400BA918E /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -436,6 +457,7 @@
 		B5BBCB492868CFD400BA918E /* ViewComponents */ = {
 			isa = PBXGroup;
 			children = (
+				B5BBCB592869C0C500BA918E /* PaddingLabel.swift */,
 				B5D480802861E3BF0069D16B /* TableViewCell.swift */,
 				B5D480842861E5DE0069D16B /* TableViewDataSource.swift */,
 				B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */,
@@ -443,6 +465,35 @@
 				B5BBCB442868C33600BA918E /* TextViewDelegate.swift */,
 			);
 			path = ViewComponents;
+			sourceTree = "<group>";
+		};
+		B5BBCB4A2869984C00BA918E /* Label */ = {
+			isa = PBXGroup;
+			children = (
+				B5BBCB4D28699A2B00BA918E /* LabelList */,
+				B5BBCB4B2869985E00BA918E /* LabelCoordinator.swift */,
+			);
+			path = Label;
+			sourceTree = "<group>";
+		};
+		B5BBCB4D28699A2B00BA918E /* LabelList */ = {
+			isa = PBXGroup;
+			children = (
+				B5BBCB502869A76000BA918E /* Views */,
+				B5BBCB4E28699A3D00BA918E /* LabelListViewController.swift */,
+				B5BBCB532869AB9800BA918E /* LabelListViewModel.swift */,
+				B5BBCB552869AC8600BA918E /* LabelListTableViewCellModel.swift */,
+				B5BBCB572869B9F900BA918E /* LabelListRepository.swift */,
+			);
+			path = LabelList;
+			sourceTree = "<group>";
+		};
+		B5BBCB502869A76000BA918E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B5BBCB512869A76A00BA918E /* LabelListTableViewCell.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		B5D4807A2861DEEE0069D16B /* IssueList */ = {
@@ -735,6 +786,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5714E1F2866F83B00EB1A54 /* IssueInsertViewModel.swift in Sources */,
+				B5BBCB4F28699A3D00BA918E /* LabelListViewController.swift in Sources */,
 				B53CFCAE285DDEB500C81EE3 /* Path.swift in Sources */,
 				B5D4807F2861E38D0069D16B /* IssueListTableViewCell.swift in Sources */,
 				B5714E1D2865AF5B00EB1A54 /* IssueInsertForm.swift in Sources */,
@@ -743,6 +795,8 @@
 				B5D480852861E5DE0069D16B /* TableViewDataSource.swift in Sources */,
 				B53CFC9D285C6F1400C81EE3 /* NetworkManager.swift in Sources */,
 				B5BBCB352867473C00BA918E /* AdditionalInfoViewController.swift in Sources */,
+				B5BBCB4C2869985E00BA918E /* LabelCoordinator.swift in Sources */,
+				B5BBCB5A2869C0C500BA918E /* PaddingLabel.swift in Sources */,
 				B5D4808B2863107C0069D16B /* Milestone.swift in Sources */,
 				B53CFC92285C49B300C81EE3 /* Coordinator.swift in Sources */,
 				B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */,
@@ -751,11 +805,15 @@
 				B5BBCB292867017D00BA918E /* Assignee.swift in Sources */,
 				B5714E1B2865ACEF00EB1A54 /* IssueInsertField.swift in Sources */,
 				B5BBCB272867005D00BA918E /* Label.swift in Sources */,
+				B5BBCB562869AC8600BA918E /* LabelListTableViewCellModel.swift in Sources */,
+				B5BBCB542869AB9800BA918E /* LabelListViewModel.swift in Sources */,
 				B53CFCAC285DDE2600C81EE3 /* NetworkManagable.swift in Sources */,
+				B5BBCB582869B9F900BA918E /* LabelListRepository.swift in Sources */,
 				B5BBCB452868C33700BA918E /* TextViewDelegate.swift in Sources */,
 				B5714E1828655A1300EB1A54 /* IssueInsertViewController.swift in Sources */,
 				B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */,
 				B53CFCA8285D848E00C81EE3 /* LoginRepository.swift in Sources */,
+				B5BBCB5C2869C19400BA918E /* String+Extension.swift in Sources */,
 				B5036241285F833300F82C4E /* IssueCoordinator.swift in Sources */,
 				B53CFC61285C23FB00C81EE3 /* LoginViewController.swift in Sources */,
 				B53CFC96285C5A2200C81EE3 /* LoginCoordinator.swift in Sources */,
@@ -774,6 +832,7 @@
 				B5D4808928630E0E0069D16B /* Issue.swift in Sources */,
 				B53CFCAA285DDD4000C81EE3 /* NetworkTarget.swift in Sources */,
 				B53CFC94285C4CAA00C81EE3 /* CoordinatorFactory.swift in Sources */,
+				B5BBCB522869A76A00BA918E /* LabelListTableViewCell.swift in Sources */,
 				B5BBCB372867487F00BA918E /* AdditionalInfoTableViewCell.swift in Sources */,
 				B53CFC5F285C23FB00C81EE3 /* SceneDelegate.swift in Sources */,
 				B5714E212866F91300EB1A54 /* IssueInsertRepository.swift in Sources */,
@@ -793,6 +852,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5BBCB5E2869CA4600BA918E /* LabelListViewModelTest.swift in Sources */,
 				B50950C12864403300298AE3 /* AuthenticationTest.swift in Sources */,
 				B50950BD2864368700298AE3 /* LoginViewModelTest.swift in Sources */,
 				B53CFC74285C23FD00C81EE3 /* IssueListViewModelTest.swift in Sources */,
