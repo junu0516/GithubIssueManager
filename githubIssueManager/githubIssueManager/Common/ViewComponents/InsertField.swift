@@ -71,8 +71,6 @@ final class InsertField: UIView {
 extension InsertField {
     
     func editted(action: @escaping (String?) -> Void ) {
-        textField.addAction(UIAction(handler: { [weak self] _ in
-            action(self?.textField.text)
-        }), for: .editingChanged)
+        textField.editted { action($0) }
     }
 }

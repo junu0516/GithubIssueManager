@@ -109,7 +109,7 @@ final class IssueInsertViewController: UIViewController {
             self?.viewModel?.input.bodyUpdated.value = text
         }
         
-        titleView.textFieldDelegate.updatedText.bind { [weak self] text in
+        titleView.editted { [weak self] text in
             self?.viewModel?.input.titleUpdated.value = text
         }
     }

@@ -10,12 +10,7 @@ final class IssueInsertField: UIControl {
         return label
     }()
     
-    let textFieldDelegate = TextFieldDelegate()
-    private lazy var textField: UITextField = {
-        let textField = UITextField()
-        textField.delegate = textFieldDelegate
-        return textField
-    }()
+    private let textField = UITextField()
     
     var rightButton: UIButton? {
         didSet {
@@ -87,5 +82,12 @@ final class IssueInsertField: UIControl {
             $0.trailing.equalToSuperview().inset(10)
             $0.bottom.equalToSuperview().offset(-10)
         }
+    }
+}
+
+extension IssueInsertField {
+    
+    func editted(action: @escaping (String?) -> Void ) {
+        textField.editted { action($0) }
     }
 }
