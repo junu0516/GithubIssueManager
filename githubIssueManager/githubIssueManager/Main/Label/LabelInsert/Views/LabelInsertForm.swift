@@ -4,26 +4,26 @@ import SnapKit
 class LabelInsertForm: UIView {
     
     let titleField: InsertField = {
-        let form = InsertField()
-        form.title = "제목"
-        form.placeHolder = "필수입력"
-        form.backgroundColor = .white
-        return form
+        let insertField = InsertField()
+        insertField.title = "제목"
+        insertField.placeHolder = "필수입력"
+        insertField.backgroundColor = .white
+        return insertField
     }()
     
     let descriptionField: InsertField = {
-        let form = InsertField()
-        form.title = "설명"
-        form.placeHolder = "선택사항"
-        form.backgroundColor = .white
-        return form
+        let insertField = InsertField()
+        insertField.title = "설명"
+        insertField.placeHolder = "선택사항"
+        insertField.backgroundColor = .white
+        return insertField
     }()
     
     let colorField: InsertField = {
-        let form = InsertField()
-        form.title = "배경색"
-        form.backgroundColor = .white
-        return form
+        let insertField = InsertField()
+        insertField.title = "배경색"
+        insertField.backgroundColor = .white
+        return insertField
     }()
     
     let colorChangeButton: UIButton = {
