@@ -384,6 +384,7 @@
 				B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */,
 				B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */,
 				B5BBCB5B2869C19400BA918E /* String+Extension.swift */,
+				B5BBCB462868CB3000BA918E /* UITextField+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -469,7 +470,6 @@
 				B5D480802861E3BF0069D16B /* TableViewCell.swift */,
 				B5D480842861E5DE0069D16B /* TableViewDataSource.swift */,
 				B53CFCA0285C757A00C81EE3 /* BasicViewModel.swift */,
-				B5BBCB462868CB3000BA918E /* UITextField+Extension.swift */,
 				B5BBCB442868C33600BA918E /* TextViewDelegate.swift */,
 				B5BBCB67286A029400BA918E /* InsertField.swift */,
 			);
