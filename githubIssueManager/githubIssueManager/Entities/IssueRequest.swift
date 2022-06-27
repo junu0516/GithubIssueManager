@@ -14,7 +14,7 @@ extension IssueRequest: Encodable {
     enum CodingKeys: String, CodingKey {
         case title
         case body
-        case labels = "label"
+        case labels = "labels"
         case assignees = "assignees"
         case milestone = "milestone"
     }
