@@ -8,6 +8,7 @@ enum ParameterType {
 
 struct NetworkTarget {
     
+    let path: Path
     let url: URLComponents
     let method: HttpMethod
     let headers: [String:String]
@@ -21,6 +22,7 @@ struct NetworkTarget {
             return nil
         }
         
+        self.path = path
         self.url = url
         self.method = method
         self.headers = headers

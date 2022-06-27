@@ -1,6 +1,6 @@
 import UIKit
 
-final class TableViewDataSource<Cell: TableViewCell, Model>: NSObject, UITableViewDataSource {
+final class TableViewDataSource<Cell: TableViewCell, Model: BasicViewModel>: NSObject, UITableViewDataSource {
     
     private let cellIdentifier : String
     private var models : [Model]?

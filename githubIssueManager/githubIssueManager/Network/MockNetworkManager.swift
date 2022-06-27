@@ -5,6 +5,9 @@ final class MockNetworkManager: NetworkManagable {
     enum MockData {
         case issues
         case authentication
+        case labels
+        case milestones
+        case assignees
         
         var fileName: String {
             switch self {
@@ -12,6 +15,12 @@ final class MockNetworkManager: NetworkManagable {
                 return "issues"
             case .authentication:
                 return "authentication"
+            case .labels:
+                return "labels"
+            case .milestones:
+                return "milestones"
+            case .assignees:
+                return "assignees"
             }
         }
     }
@@ -44,6 +53,8 @@ final class MockNetworkManager: NetworkManagable {
     
     func request<T: Encodable>(target: NetworkTarget, parameters: T?, completion: @escaping (Result<Data, Error>) -> Void) {
         
+        bindPathToMockData(path: target.path)
+        
         switch shouldFail {
         case false:
             //성공한 응답가지고 클로저 호출
@@ -53,5 +64,22 @@ final class MockNetworkManager: NetworkManagable {
             completion(.failure(TestError.responseError))
         }
         
+    }
+    
+    private func bindPathToMockData(path: Path) {
+        switch path {
+        case .githubLogin(_):
+            return
+        case .githubAccessToken:
+            loadMockData(mockData: .authentication)
+        case .issues(_,_):
+            loadMockData(mockData: .issues)
+        case .milestones(_,_):
+            loadMockData(mockData: .milestones)
+        case .labels(_,_):
+            loadMockData(mockData: .labels)
+        case .assignees(_,_):
+            loadMockData(mockData: .assignees)
+        }
     }
 }

@@ -1,6 +1,6 @@
 import UIKit
 
-extension UIButton {
+extension UIControl {
     
     func tapped(action: @escaping ()->Void ) {
         self.addAction(UIAction(handler: { _ in

@@ -5,6 +5,7 @@ final class IssueListViewModel: BasicViewModel {
     struct Input {
         let issueListRequested = Observable<Bool>()
         let issues = Observable<[Issue]>()
+        let addButtonTapped = Observable<Bool>()
     }
     
     struct Output {
@@ -14,9 +15,12 @@ final class IssueListViewModel: BasicViewModel {
     let input = Input()
     let output = Output()
     private let repository: IssueListRepository
+    weak var navigation: IssueNavigation?
     
-    init(repository: IssueListRepository = IssueListRepository()) {
+    init(repository: IssueListRepository = IssueListRepository(),
+         navigation: IssueNavigation? = nil) {
         self.repository = repository
+        self.navigation = navigation
         bind()
     }
     
@@ -28,6 +32,11 @@ final class IssueListViewModel: BasicViewModel {
         
         input.issues.bind { [weak self] issues in
             self?.output.issueViewModels.value = issues.map { IssueListTableViewCellModel(issue: $0)}
+        }
+        
+        input.addButtonTapped.bind { [weak self] isTapped in
+            guard isTapped == true else { return }
+            self?.navigation?.moveToIssueInsert()
         }
     }
     

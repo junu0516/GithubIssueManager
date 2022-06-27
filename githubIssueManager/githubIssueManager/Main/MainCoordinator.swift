@@ -41,11 +41,11 @@ extension MainCoordinator {
         var coordinator: Coordinator? {
             switch self {
             case .issue:
-                return CoordinatorFactory.create(type: IssueViewCoordinator.self)
+                return CoordinatorFactory.create(type: IssueCoordinator.self)
             case .label:
-                return CoordinatorFactory.create(type: IssueViewCoordinator.self)
+                return CoordinatorFactory.create(type: IssueCoordinator.self)
             case .milestone:
-                return CoordinatorFactory.create(type: IssueViewCoordinator.self)
+                return CoordinatorFactory.create(type: IssueCoordinator.self)
             }
         }
         

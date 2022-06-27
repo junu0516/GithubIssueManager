@@ -7,6 +7,7 @@ class TableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         addViews()
+        setAttributes()
     }
 
     @available(*, unavailable)
@@ -19,4 +20,8 @@ class TableViewCell: UITableViewCell {
     }
     
     func addViews() {}
+    
+    private func setAttributes() {
+        selectionStyle = UITableViewCell.SelectionStyle.none
+    }
 }

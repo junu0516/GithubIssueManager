@@ -15,7 +15,7 @@ struct IssueListRepository {
     }
     
     func requestIssues(completion: @escaping ([Issue]) -> Void) {
-        guard let target = NetworkTarget(path: .githubIssues(owner: "junu0516", repo: "GithubIssueManager"),
+        guard let target = NetworkTarget(path: .issues(owner: "junu0516", repo: "GithubIssueManager"),
                                          method: .get,
                                          paramteterType: .json,
                                          headers: ["Accept":"application/vnd.github.v3+json",

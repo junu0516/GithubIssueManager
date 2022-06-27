@@ -25,7 +25,9 @@ struct NetworkManager: NetworkManagable {
         }
     }
     
-    func request<T:Encodable>(target: NetworkTarget, parameters: T?, completion: @escaping (Result<Data, Error>) -> Void) {
+    func request<T:Encodable>(target: NetworkTarget,
+                              parameters: T?,
+                              completion: @escaping (Result<Data, Error>) -> Void) {
         
         AF.request(target.url,
                    method: HTTPMethod(rawValue: "\(target.method)"),
