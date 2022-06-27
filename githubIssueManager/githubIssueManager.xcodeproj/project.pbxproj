@@ -76,6 +76,7 @@
 		B5BBCB632869F89800BA918E /* LabelInsertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB622869F89800BA918E /* LabelInsertViewModel.swift */; };
 		B5BBCB662869FE8500BA918E /* LabelInsertForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB652869FE8500BA918E /* LabelInsertForm.swift */; };
 		B5BBCB68286A029400BA918E /* InsertField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB67286A029400BA918E /* InsertField.swift */; };
+		B5BBCB6A286A1F0700BA918E /* LabelInsertRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB69286A1F0700BA918E /* LabelInsertRepository.swift */; };
 		B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */; };
 		B5D4807F2861E38D0069D16B /* IssueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */; };
 		B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480802861E3BF0069D16B /* TableViewCell.swift */; };
@@ -189,6 +190,7 @@
 		B5BBCB622869F89800BA918E /* LabelInsertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelInsertViewModel.swift; sourceTree = "<group>"; };
 		B5BBCB652869FE8500BA918E /* LabelInsertForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelInsertForm.swift; sourceTree = "<group>"; };
 		B5BBCB67286A029400BA918E /* InsertField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertField.swift; sourceTree = "<group>"; };
+		B5BBCB69286A1F0700BA918E /* LabelInsertRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelInsertRepository.swift; sourceTree = "<group>"; };
 		B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListTableViewCell.swift; sourceTree = "<group>"; };
 		B5D480802861E3BF0069D16B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -512,6 +514,7 @@
 				B5BBCB642869FCD400BA918E /* Views */,
 				B5BBCB602869F87B00BA918E /* LabelInsertViewController.swift */,
 				B5BBCB622869F89800BA918E /* LabelInsertViewModel.swift */,
+				B5BBCB69286A1F0700BA918E /* LabelInsertRepository.swift */,
 			);
 			path = LabelInsert;
 			sourceTree = "<group>";
@@ -825,6 +828,7 @@
 				B53CFC9D285C6F1400C81EE3 /* NetworkManager.swift in Sources */,
 				B5BBCB352867473C00BA918E /* AdditionalInfoViewController.swift in Sources */,
 				B5BBCB4C2869985E00BA918E /* LabelCoordinator.swift in Sources */,
+				B5BBCB6A286A1F0700BA918E /* LabelInsertRepository.swift in Sources */,
 				B5BBCB5A2869C0C500BA918E /* PaddingLabel.swift in Sources */,
 				B5D4808B2863107C0069D16B /* Milestone.swift in Sources */,
 				B5BBCB662869FE8500BA918E /* LabelInsertForm.swift in Sources */,

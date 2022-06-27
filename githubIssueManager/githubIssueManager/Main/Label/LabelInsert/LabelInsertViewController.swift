@@ -74,6 +74,10 @@ final class LabelInsertViewController: UIViewController {
             self?.viewModel?.input.descriptionUpdated.value = text
         }
         
+        saveButton.tapped { [weak self] in
+            self?.viewModel?.input.saveButtonTapped.value = true
+        }
+        
         viewModel?.output.labelColor.bind { [weak self] color in
             self?.insertForm.colorField.text = "#\(color)"
             self?.previewLabel.backgroundColor = color.hexToColor()
