@@ -64,4 +64,45 @@ class IssueInsertViewModelTest: XCTestCase {
             XCTAssertNil(viewModel.input.milestones.value)
         }
     }
+    
+    func test_inserting_issue_success() throws {
+        networkManager.shouldFail = false
+        
+        XCTAssertNil(viewModel.output.issueInsertResult.value)
+        
+        viewModel.output.selectedLabels.value = [Label(title: "label")]
+        viewModel.output.selectedAssignees.value = [Assignee(title: "assignee")]
+        viewModel.output.selectedMilestones.value = [Milestone(title: "milestone", number: 0)]
+        viewModel.output.updatedTitle.value = "title"
+        viewModel.output.updatedBody.value = "body"
+        
+        viewModel.input.saveButtonTapped.value = true
+        
+        XCTAssertNotNil(viewModel.output.issueInsertResult.value)
+    }
+    
+    func test_inserting_issue_failure() throws {
+        networkManager.shouldFail = true
+        
+        XCTAssertNil(viewModel.output.issueInsertResult.value)
+        
+        viewModel.output.selectedLabels.value = [Label(title: "label")]
+        viewModel.output.selectedAssignees.value = [Assignee(title: "assignee")]
+        viewModel.output.selectedMilestones.value = [Milestone(title: "milestone", number: 0)]
+        viewModel.output.updatedTitle.value = "title"
+        viewModel.output.updatedBody.value = "body"
+        
+        viewModel.input.saveButtonTapped.value = true
+        
+        XCTAssertNil(viewModel.output.issueInsertResult.value)
+    }
+    
+    func test_inserting_issue_missing_request_parameter() throws {
+        networkManager.shouldFail = false
+        
+        XCTAssertNil(viewModel.output.issueInsertResult.value)
+        viewModel.input.saveButtonTapped.value = true
+        
+        XCTAssertNil(viewModel.output.issueInsertResult.value)
+    }
 }
