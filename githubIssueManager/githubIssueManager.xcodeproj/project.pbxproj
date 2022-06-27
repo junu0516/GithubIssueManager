@@ -71,6 +71,7 @@
 		B5BBCB582869B9F900BA918E /* LabelListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB572869B9F900BA918E /* LabelListRepository.swift */; };
 		B5BBCB5A2869C0C500BA918E /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB592869C0C500BA918E /* PaddingLabel.swift */; };
 		B5BBCB5C2869C19400BA918E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB5B2869C19400BA918E /* String+Extension.swift */; };
+		B5BBCB5E2869CA4600BA918E /* LabelListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB5D2869CA4600BA918E /* LabelListViewModelTest.swift */; };
 		B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */; };
 		B5D4807F2861E38D0069D16B /* IssueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */; };
 		B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480802861E3BF0069D16B /* TableViewCell.swift */; };
@@ -179,6 +180,7 @@
 		B5BBCB572869B9F900BA918E /* LabelListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListRepository.swift; sourceTree = "<group>"; };
 		B5BBCB592869C0C500BA918E /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		B5BBCB5B2869C19400BA918E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		B5BBCB5D2869CA4600BA918E /* LabelListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListViewModelTest.swift; sourceTree = "<group>"; };
 		B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListTableViewCell.swift; sourceTree = "<group>"; };
 		B5D480802861E3BF0069D16B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 				B50950BC2864368700298AE3 /* LoginViewModelTest.swift */,
 				B50950C02864403300298AE3 /* AuthenticationTest.swift */,
 				B5BBCB322867040800BA918E /* IssueInsertViewModelTest.swift */,
+				B5BBCB5D2869CA4600BA918E /* LabelListViewModelTest.swift */,
 			);
 			path = githubIssueManagerTests;
 			sourceTree = "<group>";
@@ -849,6 +852,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5BBCB5E2869CA4600BA918E /* LabelListViewModelTest.swift in Sources */,
 				B50950C12864403300298AE3 /* AuthenticationTest.swift in Sources */,
 				B50950BD2864368700298AE3 /* LoginViewModelTest.swift in Sources */,
 				B53CFC74285C23FD00C81EE3 /* IssueListViewModelTest.swift in Sources */,
