@@ -77,6 +77,7 @@
 		B5BBCB662869FE8500BA918E /* LabelInsertForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB652869FE8500BA918E /* LabelInsertForm.swift */; };
 		B5BBCB68286A029400BA918E /* InsertField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB67286A029400BA918E /* InsertField.swift */; };
 		B5BBCB6A286A1F0700BA918E /* LabelInsertRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB69286A1F0700BA918E /* LabelInsertRepository.swift */; };
+		B5BBCB6C286A20AF00BA918E /* LabelInsertViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB6B286A20AF00BA918E /* LabelInsertViewModelTest.swift */; };
 		B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */; };
 		B5D4807F2861E38D0069D16B /* IssueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */; };
 		B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480802861E3BF0069D16B /* TableViewCell.swift */; };
@@ -191,6 +192,7 @@
 		B5BBCB652869FE8500BA918E /* LabelInsertForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelInsertForm.swift; sourceTree = "<group>"; };
 		B5BBCB67286A029400BA918E /* InsertField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertField.swift; sourceTree = "<group>"; };
 		B5BBCB69286A1F0700BA918E /* LabelInsertRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelInsertRepository.swift; sourceTree = "<group>"; };
+		B5BBCB6B286A20AF00BA918E /* LabelInsertViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelInsertViewModelTest.swift; sourceTree = "<group>"; };
 		B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListTableViewCell.swift; sourceTree = "<group>"; };
 		B5D480802861E3BF0069D16B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -312,6 +314,7 @@
 				B50950C02864403300298AE3 /* AuthenticationTest.swift */,
 				B5BBCB322867040800BA918E /* IssueInsertViewModelTest.swift */,
 				B5BBCB5D2869CA4600BA918E /* LabelListViewModelTest.swift */,
+				B5BBCB6B286A20AF00BA918E /* LabelInsertViewModelTest.swift */,
 			);
 			path = githubIssueManagerTests;
 			sourceTree = "<group>";
@@ -892,6 +895,7 @@
 				B50950C12864403300298AE3 /* AuthenticationTest.swift in Sources */,
 				B50950BD2864368700298AE3 /* LoginViewModelTest.swift in Sources */,
 				B53CFC74285C23FD00C81EE3 /* IssueListViewModelTest.swift in Sources */,
+				B5BBCB6C286A20AF00BA918E /* LabelInsertViewModelTest.swift in Sources */,
 				B5BBCB332867040800BA918E /* IssueInsertViewModelTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

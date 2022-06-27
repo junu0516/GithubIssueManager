@@ -59,7 +59,7 @@ final class LabelInsertViewController: UIViewController {
     private func bind() {
         
         cancelButton.tapped { [weak self] in
-            self?.viewModel?.input.cancelButtonTapped.value = true
+            self?.viewModel?.input.closingViewRequested.value = true
         }
         
         insertForm.colorChangeButton.tapped { [weak self] in

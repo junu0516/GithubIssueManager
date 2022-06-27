@@ -3,7 +3,7 @@ import Foundation
 final class LabelInsertViewModel: BasicViewModel {
     
     struct Input {
-        let cancelButtonTapped = Observable<Bool>()
+        let closingViewRequested = Observable<Bool>()
         let colorChangeButtonTapped = Observable<Bool>()
         let titleUpdated = Observable<String>()
         let descriptionUpdated = Observable<String>()
@@ -14,6 +14,7 @@ final class LabelInsertViewModel: BasicViewModel {
         let labelTitle = Observable<String>()
         let labelDescription = Observable<String>()
         let isTitleEmpty = Observable<Bool>(true)
+        let labelInsertResult = Observable<Bool>()
     }
     
     let input = Input()
@@ -37,7 +38,7 @@ final class LabelInsertViewModel: BasicViewModel {
         
         output.labelColor.value = randomColor
         
-        input.cancelButtonTapped.bind { [weak self] isTapped in
+        input.closingViewRequested.bind { [weak self] isTapped in
             guard isTapped == true else { return }
             self?.navigation?.goBackToLabelList()
         }
@@ -60,6 +61,10 @@ final class LabelInsertViewModel: BasicViewModel {
             guard isTapped == true else { return }
             self?.requestAddingLabel()
         }
+        
+        output.labelInsertResult.bind { [weak self] insertResult in
+            self?.input.closingViewRequested.value = insertResult
+        }
     }
     
     private func requestAddingLabel() {
@@ -69,7 +74,7 @@ final class LabelInsertViewModel: BasicViewModel {
         let labelRequest = Label(title: title, description: description, color: color)
         
         repository.requestAddingLabel(label: labelRequest) { [weak self] in
-            self?.navigation?.goBackToLabelList()
+            self?.output.labelInsertResult.value = true
         }
     }
 }

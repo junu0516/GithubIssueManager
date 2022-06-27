@@ -5,7 +5,6 @@ class IssueInsertViewModelTest: XCTestCase {
 
     private var networkManager: MockNetworkManager!
     private var viewModel: IssueInsertViewModel!
-
     
     override func setUpWithError() throws {
         self.networkManager = MockNetworkManager()
