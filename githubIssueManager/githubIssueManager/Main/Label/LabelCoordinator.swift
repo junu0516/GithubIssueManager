@@ -14,7 +14,12 @@ final class LabelCoordinator: Coordinator {
     }
     
     func start() {
-        let viewController = LabelListViewController()
+        let viewModel = LabelListViewModel(navigation: self)
+        let viewController = LabelListViewController(viewModel: viewModel)
         navigationController?.pushViewController(viewController, animated: true)
     }
+}
+
+extension LabelCoordinator: LabelNavigation {
+    
 }
