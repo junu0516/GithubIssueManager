@@ -34,6 +34,12 @@ final class LabelListViewController: UIViewController {
         
         setAttributes()
         addViews()
+        bind()
+    }
+    
+    private func bind() {
+        
+        viewModel?.input.labelListRequested.value = true
     }
     
     private func addViews() {

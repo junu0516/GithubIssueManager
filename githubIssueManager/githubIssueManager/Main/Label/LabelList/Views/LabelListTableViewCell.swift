@@ -12,7 +12,7 @@ final class LabelListTableViewCell: TableViewCell {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
-        label.font = .systemFont(ofSize: 22, weight: .bold)
+        label.font = .systemFont(ofSize: 22)
         label.numberOfLines = 1
         label.lineBreakMode = .byTruncatingTail
         label.textColor = .black
