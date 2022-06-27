@@ -1,6 +1,10 @@
 import UIKit
 
-protocol LabelNavigation: AnyObject {}
+protocol LabelNavigation: AnyObject {
+    
+    func moveToLabelInsert()
+    func goBackToLabelList()
+}
 
 final class LabelCoordinator: Coordinator {
     
@@ -22,4 +26,14 @@ final class LabelCoordinator: Coordinator {
 
 extension LabelCoordinator: LabelNavigation {
     
+    func moveToLabelInsert() {
+        let viewModel = LabelInsertViewModel(navigation: self)
+        let viewController = LabelInsertViewController(viewModel: viewModel)
+        let childNavigation = UINavigationController(rootViewController: viewController)
+        navigationController?.present(childNavigation, animated: true)
+    }
+    
+    func goBackToLabelList() {
+        navigationController?.presentedViewController?.dismiss(animated: true)
+    }
 }

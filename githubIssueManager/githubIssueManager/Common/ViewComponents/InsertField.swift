@@ -1,24 +1,18 @@
-import SnapKit
 import UIKit
+import SnapKit
 
-final class IssueInsertField: UIControl {
+final class InsertField: UIView {
     
     private let titleLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .left
-        label.font = UIFont.systemFont(ofSize: 20)
         return label
     }()
     
-    private let textField = UITextField()
-    
-    var rightButton: UIButton? {
-        didSet {
-            textField.rightViewMode = .always
-            textField.rightView = rightButton
-            textField.rightView?.tintColor = .gray
-        }
-    }
+    private let textField: UITextField = {
+        let textField = UITextField()
+        return textField
+    }()
     
     var title: String? {
         didSet {
@@ -32,27 +26,16 @@ final class IssueInsertField: UIControl {
         }
     }
     
+    var rightButton: UIButton? {
+        didSet {
+            textField.rightViewMode = .always
+            textField.rightView = rightButton
+        }
+    }
+    
     var text: String? {
         didSet {
             textField.text = text
-        }
-    }
-    
-    var isTextingEnabled: Bool = true {
-        didSet {
-            textField.isUserInteractionEnabled = isTextingEnabled
-        }
-    }
-    
-    var textAlignment: NSTextAlignment = .left {
-        didSet {
-            textField.textAlignment = textAlignment
-        }
-    }
-    
-    var textColor: UIColor = .black {
-        didSet {
-            textField.textColor = textColor
         }
     }
     
@@ -65,13 +48,13 @@ final class IssueInsertField: UIControl {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func addViews() {
+    private func addViews() {
         
         self.addSubview(titleLabel)
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
-            $0.leading.equalToSuperview()
-            $0.width.equalToSuperview().multipliedBy(0.22)
+            $0.leading.equalToSuperview().offset(15)
+            $0.width.equalToSuperview().multipliedBy(0.3)
             $0.bottom.equalToSuperview().offset(-10)
         }
         
@@ -79,13 +62,13 @@ final class IssueInsertField: UIControl {
         textField.snp.makeConstraints {
             $0.top.equalToSuperview().offset(10)
             $0.leading.equalTo(titleLabel.snp.trailing)
-            $0.trailing.equalToSuperview().inset(10)
+            $0.trailing.equalToSuperview().offset(-15)
             $0.bottom.equalToSuperview().offset(-10)
         }
     }
 }
 
-extension IssueInsertField {
+extension InsertField {
     
     func editted(action: @escaping (String?) -> Void ) {
         textField.editted { action($0) }
