@@ -11,7 +11,8 @@ final class CoordinatorFactory: CoordinatorFactoryApplicable {
         ObjectIdentifier(AppCoordinator.self): AppCoordinator.self,
         ObjectIdentifier(LoginCoordinator.self): LoginCoordinator.self,
         ObjectIdentifier(MainCoordinator.self): MainCoordinator.self,
-        ObjectIdentifier(IssueCoordinator.self): IssueCoordinator.self
+        ObjectIdentifier(IssueCoordinator.self): IssueCoordinator.self,
+        ObjectIdentifier(LabelCoordinator.self): LabelCoordinator.self
     ]
         
     static func create<T:Coordinator>(type: T.Type) -> Coordinator? {

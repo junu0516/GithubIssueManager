@@ -43,7 +43,7 @@ extension MainCoordinator {
             case .issue:
                 return CoordinatorFactory.create(type: IssueCoordinator.self)
             case .label:
-                return CoordinatorFactory.create(type: IssueCoordinator.self)
+                return CoordinatorFactory.create(type: LabelCoordinator.self)
             case .milestone:
                 return CoordinatorFactory.create(type: IssueCoordinator.self)
             }
