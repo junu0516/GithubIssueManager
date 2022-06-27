@@ -26,7 +26,6 @@ struct LabelListRepository {
             switch result {
             case .success(let data):
                 let labels = objectConverter.convertJsonToObject(from: data, to: [Label].self)
-                Log.debug("\(labels)")
                 completion(labels ?? [])
             case .failure(let error):
                 Log.error("\(error)")
