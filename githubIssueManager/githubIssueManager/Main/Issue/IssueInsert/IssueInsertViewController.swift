@@ -155,5 +155,3 @@ final class IssueInsertViewController: UIViewController {
         view.endEditing(true)
     }
 }
-
-
