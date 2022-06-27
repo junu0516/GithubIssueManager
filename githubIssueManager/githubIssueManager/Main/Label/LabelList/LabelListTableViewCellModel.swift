@@ -5,6 +5,7 @@ final class LabelListTableViewCellModel: BasicViewModel {
     struct Input{}
     struct Output{
         let title = Observable<String>()
+        let description = Observable<String>()
     }
     
     let input = Input()
@@ -12,5 +13,6 @@ final class LabelListTableViewCellModel: BasicViewModel {
     
     init(label: Label) {
         self.output.title.value = label.title
+        self.output.description.value = label.description
     }
 }
