@@ -69,6 +69,7 @@
 		B5BBCB542869AB9800BA918E /* LabelListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB532869AB9800BA918E /* LabelListViewModel.swift */; };
 		B5BBCB562869AC8600BA918E /* LabelListTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB552869AC8600BA918E /* LabelListTableViewCellModel.swift */; };
 		B5BBCB582869B9F900BA918E /* LabelListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB572869B9F900BA918E /* LabelListRepository.swift */; };
+		B5BBCB5C2869C19400BA918E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB5B2869C19400BA918E /* String+Extension.swift */; };
 		B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */; };
 		B5D4807F2861E38D0069D16B /* IssueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */; };
 		B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480802861E3BF0069D16B /* TableViewCell.swift */; };
@@ -175,6 +176,7 @@
 		B5BBCB532869AB9800BA918E /* LabelListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListViewModel.swift; sourceTree = "<group>"; };
 		B5BBCB552869AC8600BA918E /* LabelListTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListTableViewCellModel.swift; sourceTree = "<group>"; };
 		B5BBCB572869B9F900BA918E /* LabelListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListRepository.swift; sourceTree = "<group>"; };
+		B5BBCB5B2869C19400BA918E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListTableViewCell.swift; sourceTree = "<group>"; };
 		B5D480802861E3BF0069D16B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -368,6 +370,7 @@
 				B53CFCA3285C78A300C81EE3 /* UIControl+Extension.swift */,
 				B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */,
 				B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */,
+				B5BBCB5B2869C19400BA918E /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -803,6 +806,7 @@
 				B5714E1828655A1300EB1A54 /* IssueInsertViewController.swift in Sources */,
 				B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */,
 				B53CFCA8285D848E00C81EE3 /* LoginRepository.swift in Sources */,
+				B5BBCB5C2869C19400BA918E /* String+Extension.swift in Sources */,
 				B5036241285F833300F82C4E /* IssueCoordinator.swift in Sources */,
 				B53CFC61285C23FB00C81EE3 /* LoginViewController.swift in Sources */,
 				B53CFC96285C5A2200C81EE3 /* LoginCoordinator.swift in Sources */,
