@@ -9,6 +9,7 @@ final class LabelInsertViewController: UIViewController {
         let button = UIButton()
         button.setTitle("저장", for: .normal)
         button.setTitleColor(UIColor.systemBlue, for: .normal)
+        button.setTitleColor(UIColor.systemGray, for: .disabled)
         button.setImage(UIImage(systemName: "plus"), for: .normal)
         button.titleLabel?.textAlignment = .left
         return button
@@ -81,6 +82,10 @@ final class LabelInsertViewController: UIViewController {
         
         viewModel?.output.labelTitle.bind { [weak self] title in
             self?.previewLabel.text = title
+        }
+        
+        viewModel?.output.isTitleEmpty.bind { [weak self] isEmpty in
+            self?.saveButton.isEnabled = !isEmpty
         }
     }
     

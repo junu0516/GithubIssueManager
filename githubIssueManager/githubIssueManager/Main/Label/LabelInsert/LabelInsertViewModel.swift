@@ -12,6 +12,7 @@ final class LabelInsertViewModel: BasicViewModel {
         let labelColor = Observable<String>()
         let labelTitle = Observable<String>()
         let labelDescription = Observable<String>()
+        let isTitleEmpty = Observable<Bool>(true)
     }
     
     let input = Input()
@@ -31,7 +32,6 @@ final class LabelInsertViewModel: BasicViewModel {
     private func bind() {
         
         output.labelColor.value = randomColor
-        output.labelTitle.value = "레이블"
         
         input.cancelButtonTapped.bind { [weak self] isTapped in
             guard isTapped == true else { return }
@@ -45,6 +45,7 @@ final class LabelInsertViewModel: BasicViewModel {
         
         input.titleUpdated.bind { [weak self] title in
             self?.output.labelTitle.value = title
+            self?.output.isTitleEmpty.value = title.isEmpty
         }
         
         input.descriptionUpdated.bind { [weak self] description in
