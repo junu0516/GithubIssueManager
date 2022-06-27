@@ -13,6 +13,7 @@ final class IssueInsertViewModel: BasicViewModel {
         let assigneeFieldTapped = Observable<Bool>()
         let titleUpdated = Observable<String>()
         let bodyUpdated = Observable<String>()
+        let closingViewRequested = Observable<Bool>()
     }
     
     struct Output {
@@ -21,6 +22,7 @@ final class IssueInsertViewModel: BasicViewModel {
         let selectedAssignees = Observable<[Assignee]>()
         let updatedTitle = Observable<String>()
         let updatedBody = Observable<String>()
+        let issueInsertResult = Observable<Bool>()
     }
     
     let input = Input()
@@ -36,6 +38,7 @@ final class IssueInsertViewModel: BasicViewModel {
     }
     
     private func bind() {
+        
         input.repoInfoRequested.bind { [weak self] isRequested in
             guard isRequested == true else { return }
             DispatchQueue.global(qos: .background).sync {
@@ -79,6 +82,11 @@ final class IssueInsertViewModel: BasicViewModel {
             guard isTapped == true else { return }
             self?.requestAddingIssue()
         }
+        
+        input.closingViewRequested.bind { [weak self] isReqeusted in
+            guard isReqeusted == true else { return }
+            self?.navigation?.goBackToIssueList()
+        }
     }
     
     private func fetchRepoInfo() {
@@ -116,8 +124,8 @@ final class IssueInsertViewModel: BasicViewModel {
               let body = output.updatedBody.value else { return }
         
         let issueRequest = IssueRequest(title: title , body: body, labels: labels, assignees: assignees, milestone: milestone)
-        repository.requestAddingIssue(issue: issueRequest) {
-            Log.debug("success")
+        repository.requestAddingIssue(issue: issueRequest) { [weak self] in
+            self?.output.issueInsertResult.value = true
         }
     }
 }

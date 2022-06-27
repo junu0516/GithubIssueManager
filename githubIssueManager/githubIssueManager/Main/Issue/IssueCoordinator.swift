@@ -5,6 +5,7 @@ protocol IssueNavigation: AnyObject {
     func moveToIssueInsert()
     func showInfoSelectView(models: [TitleValuePossessible], saveOperation: @escaping ([Int]) -> Void)
     func closeSelectView()
+    func goBackToIssueList()
 }
 
 final class IssueCoordinator: Coordinator {
@@ -42,5 +43,9 @@ extension IssueCoordinator: IssueNavigation {
     
     func closeSelectView() {
         navigationController?.presentedViewController?.dismiss(animated: true)
+    }
+    
+    func goBackToIssueList() {
+        navigationController?.popViewController(animated: true)
     }
 }

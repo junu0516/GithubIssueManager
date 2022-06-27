@@ -96,6 +96,11 @@ final class IssueInsertViewController: UIViewController {
             self?.insertForm.milestoneField.text = String(text.dropFirst())
         }
         
+        viewModel?.output.issueInsertResult.bind { [weak self] insertResult in
+            guard insertResult == true else { return }
+            self?.viewModel?.input.closingViewRequested.value = true
+        }
+        
         saveButton.tapped { [weak self] in
             self?.viewModel?.input.saveButtonTapped.value = true
         }
@@ -107,7 +112,6 @@ final class IssueInsertViewController: UIViewController {
         titleView.textFieldDelegate.updatedText.bind { [weak self] text in
             self?.viewModel?.input.titleUpdated.value = text
         }
-        
     }
     
     private func addViews() {
