@@ -72,6 +72,8 @@
 		B5BBCB5A2869C0C500BA918E /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB592869C0C500BA918E /* PaddingLabel.swift */; };
 		B5BBCB5C2869C19400BA918E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB5B2869C19400BA918E /* String+Extension.swift */; };
 		B5BBCB5E2869CA4600BA918E /* LabelListViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB5D2869CA4600BA918E /* LabelListViewModelTest.swift */; };
+		B5BBCB612869F87B00BA918E /* LabelInsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB602869F87B00BA918E /* LabelInsertViewController.swift */; };
+		B5BBCB632869F89800BA918E /* LabelInsertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB622869F89800BA918E /* LabelInsertViewModel.swift */; };
 		B5D4807D2861DF9F0069D16B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */; };
 		B5D4807F2861E38D0069D16B /* IssueListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */; };
 		B5D480812861E3BF0069D16B /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5D480802861E3BF0069D16B /* TableViewCell.swift */; };
@@ -181,6 +183,8 @@
 		B5BBCB592869C0C500BA918E /* PaddingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
 		B5BBCB5B2869C19400BA918E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		B5BBCB5D2869CA4600BA918E /* LabelListViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelListViewModelTest.swift; sourceTree = "<group>"; };
+		B5BBCB602869F87B00BA918E /* LabelInsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelInsertViewController.swift; sourceTree = "<group>"; };
+		B5BBCB622869F89800BA918E /* LabelInsertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelInsertViewModel.swift; sourceTree = "<group>"; };
 		B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		B5D4807E2861E38C0069D16B /* IssueListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueListTableViewCell.swift; sourceTree = "<group>"; };
 		B5D480802861E3BF0069D16B /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -470,6 +474,7 @@
 		B5BBCB4A2869984C00BA918E /* Label */ = {
 			isa = PBXGroup;
 			children = (
+				B5BBCB5F2869F83700BA918E /* LabelInsert */,
 				B5BBCB4D28699A2B00BA918E /* LabelList */,
 				B5BBCB4B2869985E00BA918E /* LabelCoordinator.swift */,
 			);
@@ -494,6 +499,15 @@
 				B5BBCB512869A76A00BA918E /* LabelListTableViewCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		B5BBCB5F2869F83700BA918E /* LabelInsert */ = {
+			isa = PBXGroup;
+			children = (
+				B5BBCB602869F87B00BA918E /* LabelInsertViewController.swift */,
+				B5BBCB622869F89800BA918E /* LabelInsertViewModel.swift */,
+			);
+			path = LabelInsert;
 			sourceTree = "<group>";
 		};
 		B5D4807A2861DEEE0069D16B /* IssueList */ = {
@@ -787,6 +801,7 @@
 			files = (
 				B5714E1F2866F83B00EB1A54 /* IssueInsertViewModel.swift in Sources */,
 				B5BBCB4F28699A3D00BA918E /* LabelListViewController.swift in Sources */,
+				B5BBCB632869F89800BA918E /* LabelInsertViewModel.swift in Sources */,
 				B53CFCAE285DDEB500C81EE3 /* Path.swift in Sources */,
 				B5D4807F2861E38D0069D16B /* IssueListTableViewCell.swift in Sources */,
 				B5714E1D2865AF5B00EB1A54 /* IssueInsertForm.swift in Sources */,
@@ -828,6 +843,7 @@
 				B503623E285F6B6400F82C4E /* IssueListViewController.swift in Sources */,
 				B53CFCA1285C757A00C81EE3 /* BasicViewModel.swift in Sources */,
 				B5036243285F8A5B00F82C4E /* IssueListViewModel.swift in Sources */,
+				B5BBCB612869F87B00BA918E /* LabelInsertViewController.swift in Sources */,
 				B5036235285E5C3E00F82C4E /* DeepLinkeRouter.swift in Sources */,
 				B5D4808928630E0E0069D16B /* Issue.swift in Sources */,
 				B53CFCAA285DDD4000C81EE3 /* NetworkTarget.swift in Sources */,

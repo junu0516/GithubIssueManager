@@ -55,6 +55,10 @@ final class LabelListViewController: UIViewController {
             self?.labelDataSource.items = $0
             self?.labelTableView.reloadData()
         }
+        
+        addButton.tapped { [weak self] in
+            self?.viewModel?.input.insertButtonTapped.value = true
+        }
     }
     
     private func setAttributes() {

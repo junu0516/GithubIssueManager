@@ -5,6 +5,7 @@ final class LabelListViewModel: BasicViewModel {
     struct Input{
         let labelListRequested = Observable<Bool>()
         let labels = Observable<[Label]>()
+        let insertButtonTapped = Observable<Bool>()
     }
     struct Output{
         let labelCellModels = Observable<[LabelListTableViewCellModel]>()
@@ -33,6 +34,11 @@ final class LabelListViewModel: BasicViewModel {
         
         input.labels.bind { [weak self] in
             self?.output.labelCellModels.value = $0.map { LabelListTableViewCellModel(label: $0) }
+        }
+        
+        input.insertButtonTapped.bind { [weak self] isTapped in
+            guard isTapped == true else { return }
+            self?.navigation?.moveToLabelInsert()
         }
     }
     
