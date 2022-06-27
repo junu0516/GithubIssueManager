@@ -34,7 +34,6 @@ final class LabelInsertViewController: UIViewController {
     
     private let previewLabel: PaddingLabel = {
         let label = PaddingLabel()
-        label.text = "레이블"
         label.padding = UIEdgeInsets(top: 4, left: 16, bottom: 4, right: 16)
         label.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         label.clipsToBounds = true
@@ -65,11 +64,23 @@ final class LabelInsertViewController: UIViewController {
         insertForm.colorChangeButton.tapped { [weak self] in
             self?.viewModel?.input.colorChangeButtonTapped.value = true
         }
+
+        insertForm.titleField.editted { [weak self] text in
+            self?.viewModel?.input.titleUpdated.value = text
+        }
+        
+        insertForm.descriptionField.editted { [weak self] text in
+            self?.viewModel?.input.descriptionUpdated.value = text
+        }
         
         viewModel?.output.labelColor.bind { [weak self] color in
             self?.insertForm.colorField.text = "#\(color)"
             self?.previewLabel.backgroundColor = color.hexToColor()
             self?.previewLabel.textColor = color.hexToColor().contrast
+        }
+        
+        viewModel?.output.labelTitle.bind { [weak self] title in
+            self?.previewLabel.text = title
         }
     }
     
