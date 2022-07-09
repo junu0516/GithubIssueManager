@@ -28,8 +28,13 @@ struct NetworkManager: NetworkManagable {
     func request<T:Encodable>(target: NetworkTarget,
                               parameters: T?,
                               completion: @escaping (Result<Data, Error>) -> Void) {
+
+        guard let url = URLComponents(string: "\(target.path)") else {
+            completion(.failure(URLError.error))
+            return
+        }
         
-        AF.request(target.url,
+        AF.request(url,
                    method: HTTPMethod(rawValue: "\(target.method)"),
                    parameters: self.parameters(parameters),
                    encoding: encoder(parameterType: target.paramterType),
@@ -54,5 +59,17 @@ struct NetworkManager: NetworkManagable {
         
         let data = request.httpBody ?? Data()
         Log.debug("\(request)\t\(request.httpMethod ?? "")\n\(String(data: data, encoding: .utf8) ?? "")")
+    }
+}
+
+extension NetworkManager {
+    
+    enum URLError: Error, LocalizedError {
+        
+        case error
+        
+        var errorDescription: String? {
+            return "Failed generating URLComponents from NetworkTarget Object"
+        }
     }
 }

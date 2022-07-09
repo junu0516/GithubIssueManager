@@ -5,7 +5,7 @@ final class DeepLinkRouter {
     private weak var appCoordinator: AppCoordinator?
     private let networkManager: NetworkManagable
     private let objectConverter: ObjectConvertible
-
+    
     var authCode = Observable<String>()
     var authToken = Observable<String>()
     
@@ -33,11 +33,11 @@ final class DeepLinkRouter {
     private func requestAccessToken() {
         guard let authCode = authCode.value else { return }
         let authRequest = AuthRequest(code: authCode)
+        let target = NetworkTarget(path: .githubAccessToken,
+                                   method: .post,
+                                   paramteterType: .json,
+                                   headers: ["Accept":"application/json"])
         
-        guard let target = NetworkTarget(path: .githubAccessToken,
-                                         method: .post,
-                                         paramteterType: .json,
-                                         headers: ["Accept":"application/json"]) else { return }
         networkManager.request(target: target, parameters: authRequest) { [weak self] result in
             switch result {
             case .success(let data):

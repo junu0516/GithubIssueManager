@@ -15,11 +15,11 @@ struct IssueListRepository {
     }
     
     func requestIssues(completion: @escaping ([Issue]) -> Void) {
-        guard let target = NetworkTarget(path: .issues(owner: "junu0516", repo: "GithubIssueManager"),
-                                         method: .get,
-                                         paramteterType: .json,
-                                         headers: ["Accept":"application/vnd.github.v3+json",
-                                                   "Authorization":"token \(accessToken)"]) else { return }
+        let target = NetworkTarget(path: .issues(owner: "junu0516", repo: "GithubIssueManager"),
+                                   method: .get,
+                                   paramteterType: .json,
+                                   headers: ["Accept":"application/vnd.github.v3+json",
+                                             "Authorization":"token \(accessToken)"])
         
         networkManager.request(target: target,
                                parameters: Optional<String>.none) { result in

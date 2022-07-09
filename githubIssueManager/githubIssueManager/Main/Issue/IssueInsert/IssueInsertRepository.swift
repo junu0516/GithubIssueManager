@@ -15,11 +15,11 @@ struct IssueInsertRepository {
     }
     
     func requestMilestones(completion: @escaping ([Milestone]) -> Void) {
-        guard let target = NetworkTarget(path: .milestones(owner: "junu0516", repo: "GithubIssueManager"),
-                                         method: .get,
-                                         paramteterType: .json,
-                                         headers: ["Accept":"application/vnd.github.v3+json",
-                                                   "Authorization":"token \(accessToken)"]) else { return }
+        let target = NetworkTarget(path: .milestones(owner: "junu0516", repo: "GithubIssueManager"),
+                                   method: .get,
+                                   paramteterType: .json,
+                                   headers: ["Accept":"application/vnd.github.v3+json",
+                                             "Authorization":"token \(accessToken)"])
         
         networkManager.request(target: target,
                                parameters: Optional<String>.none) { result in
@@ -34,11 +34,11 @@ struct IssueInsertRepository {
     }
     
     func requestLabels(completion: @escaping ([Label]) -> Void) {
-        guard let target = NetworkTarget(path: .labels(owner: "junu0516", repo: "GithubIssueManager"),
-                                         method: .get,
-                                         paramteterType: .json,
-                                         headers: ["Accept":"application/vnd.github.v3+json",
-                                                   "Authorization":"token \(accessToken)"]) else { return }
+        let target = NetworkTarget(path: .labels(owner: "junu0516", repo: "GithubIssueManager"),
+                                   method: .get,
+                                   paramteterType: .json,
+                                   headers: ["Accept":"application/vnd.github.v3+json",
+                                             "Authorization":"token \(accessToken)"])
         
         networkManager.request(target: target,
                                parameters: Optional<String>.none) { result in
@@ -53,12 +53,11 @@ struct IssueInsertRepository {
     }
     
     func requestAssignees(completion: @escaping ([Assignee]) -> Void) {
-        guard let target = NetworkTarget(path: .assignees(owner: "junu0516", repo: "GithubIssueManager"),
-                                         method: .get,
-                                         paramteterType: .json,
-                                         headers: ["Accept":"application/vnd.github.v3+json",
-                                                   "Authorization":"token \(accessToken)"]) else { return }
-        
+        let target = NetworkTarget(path: .assignees(owner: "junu0516", repo: "GithubIssueManager"),
+                                   method: .get,
+                                   paramteterType: .json,
+                                   headers: ["Accept":"application/vnd.github.v3+json",
+                                             "Authorization":"token \(accessToken)"])
         networkManager.request(target: target,
                                parameters: Optional<String>.none) { result in
             switch result {
@@ -73,11 +72,11 @@ struct IssueInsertRepository {
     
     func requestAddingIssue(issue: IssueRequest, completion: @escaping () -> Void) {
         
-        guard let target = NetworkTarget(path: .issues(owner: "junu0516", repo: "GithubIssueManager"),
-                                         method: .post,
-                                         paramteterType: .json,
-                                         headers: ["Accept":"application/vnd.github.v3+json",
-                                                   "Authorization":"token \(accessToken)"]) else { return }
+        let target = NetworkTarget(path: .issues(owner: "junu0516", repo: "GithubIssueManager"),
+                                   method: .post,
+                                   paramteterType: .json,
+                                   headers: ["Accept":"application/vnd.github.v3+json",
+                                             "Authorization":"token \(accessToken)"])
         
         networkManager.request(target: target, parameters: issue) { result in
             

@@ -15,11 +15,11 @@ struct LabelListRepository {
     }
     
     func requestLabels(completion: @escaping ([Label]) -> Void) {
-        guard let target = NetworkTarget(path: .labels(owner: "junu0516", repo: "GithubIssueManager"),
-                                         method: .get,
-                                         paramteterType: .json,
-                                         headers: ["Accept":"application/vnd.github.v3+json",
-                                                   "Authorization":"token \(accessToken)"]) else { return }
+        let target = NetworkTarget(path: .labels(owner: "junu0516", repo: "GithubIssueManager"),
+                                   method: .get,
+                                   paramteterType: .json,
+                                   headers: ["Accept":"application/vnd.github.v3+json",
+                                             "Authorization":"token \(accessToken)"])
         
         networkManager.request(target: target,
                                parameters: Optional<String>.none) { result in

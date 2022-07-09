@@ -13,21 +13,6 @@ class IssueInsertViewModelTest: XCTestCase {
         self.viewModel = IssueInsertViewModel(repository: repository)
     }
     
-    func test_loading_mock_data() {
-        XCTAssertNil(networkManager.mockResponseData)
-
-        networkManager.loadMockData(mockData: .assignees)
-        XCTAssertNotNil(networkManager.mockResponseData)
-        
-        networkManager.mockResponseData = nil
-        networkManager.loadMockData(mockData: .labels)
-        XCTAssertNotNil(networkManager.mockResponseData)
-
-        networkManager.mockResponseData = nil
-        networkManager.loadMockData(mockData: .milestones)
-        XCTAssertNotNil(networkManager.mockResponseData)
-    }
-
     func test_fetching_repo_info_success() throws {
         networkManager.shouldFail = false
         

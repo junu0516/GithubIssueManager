@@ -16,11 +16,11 @@ struct LabelInsertRepository {
     
     func requestAddingLabel(label: Label, completion: @escaping () -> Void) {
         
-        guard let target = NetworkTarget(path: .labels(owner: "junu0516", repo: "GithubIssueManager"),
-                                         method: .post,
-                                         paramteterType: .json,
-                                         headers: ["Accept":"application/vnd.github.v3+json",
-                                                   "Authorization":"token \(accessToken)"]) else { return }
+        let target = NetworkTarget(path: .labels(owner: "junu0516", repo: "GithubIssueManager"),
+                                   method: .post,
+                                   paramteterType: .json,
+                                   headers: ["Accept":"application/vnd.github.v3+json",
+                                             "Authorization":"token \(accessToken)"])
         
         networkManager.request(target: target, parameters: label) { result in
             switch result {

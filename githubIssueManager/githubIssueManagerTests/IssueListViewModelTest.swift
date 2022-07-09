@@ -13,13 +13,6 @@ class IssueListViewModelTest: XCTestCase {
         self.viewModel = IssueListViewModel(repository: repository)
     }
     
-    // 목데이터 불러오기 테스트
-    func test_loading_mock_data() {
-        networkManager.loadMockData(mockData: .issues)
-        XCTAssertNotNil(networkManager.mockResponseData)
-    }
-
-    // 이슈 리스트 불러오기 테스트
     func test_fetching_issues_success() throws {
         networkManager.shouldFail = false
 

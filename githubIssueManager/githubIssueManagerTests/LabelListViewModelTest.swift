@@ -14,11 +14,6 @@ class LabelListViewModelTest: XCTestCase {
         self.viewModel = LabelListViewModel(repository: repository)
     }
     
-    func test_loading_mock_data() {
-        networkManager.loadMockData(mockData: .labels)
-        XCTAssertNotNil(networkManager.mockResponseData)
-    }
-    
     func test_fetching_labels_success() throws {
         networkManager.shouldFail = false
         
