@@ -18,5 +18,6 @@ target 'githubIssueManager' do
 
   pod 'SnapKit'
   pod 'Alamofire' 
+  pod 'SwiftyMarkdown'
 
 end

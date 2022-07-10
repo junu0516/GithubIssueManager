@@ -1,20 +1,24 @@
 PODS:
   - Alamofire (5.6.1)
   - SnapKit (5.6.0)
+  - SwiftyMarkdown (1.2.4)
 
 DEPENDENCIES:
   - Alamofire
   - SnapKit
+  - SwiftyMarkdown
 
 SPEC REPOS:
   trunk:
     - Alamofire
     - SnapKit
+    - SwiftyMarkdown
 
 SPEC CHECKSUMS:
   Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
+  SwiftyMarkdown: 7cdec87c6ab5cd9ea0e22ced288e889960649ba5
 
-PODFILE CHECKSUM: add1466486b0f505cb87b370d2e33e3eb319a7af
+PODFILE CHECKSUM: f606a48a15f58936521677b6e4f8a03ae944d9f7
 
 COCOAPODS: 1.11.3
