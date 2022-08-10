@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import SwiftyMarkdown
 
 final class IssueInsertViewController: UIViewController {
     
@@ -21,6 +22,16 @@ final class IssueInsertViewController: UIViewController {
         textView.layer.borderColor = UIColor.lightGray.cgColor
         textView.layer.borderWidth = 0.5
         textView.delegate = textViewDelegate
+        return textView
+    }()
+    
+    private let previewView: UITextView = {
+        let textView = UITextView()
+        textView.textColor = .black
+        textView.isHidden = true
+        textView.isEditable = false
+        textView.layer.borderColor = UIColor.lightGray.cgColor
+        textView.layer.borderWidth = 0.5
         return textView
     }()
     
@@ -101,16 +112,27 @@ final class IssueInsertViewController: UIViewController {
             self?.viewModel?.input.closingViewRequested.value = true
         }
         
+        viewModel?.output.markdownPreview.bind { [weak self] previewFlag in
+            guard let self = self else { return }
+            self.textView.isHidden = previewFlag
+            self.previewView.isHidden = !previewFlag
+        }
+        
         saveButton.tapped { [weak self] in
             self?.viewModel?.input.saveButtonTapped.value = true
         }
         
         textViewDelegate.updatedText.bind { [weak self] text in
             self?.viewModel?.input.bodyUpdated.value = text
+            self?.previewView.attributedText = SwiftyMarkdown(string: text).attributedString()
         }
         
         titleView.editted { [weak self] text in
             self?.viewModel?.input.titleUpdated.value = text
+        }
+        
+        segmentView.valueSelected { [weak self] index in
+            self?.viewModel?.input.segmentIndexSelected.value = index
         }
     }
     
@@ -130,18 +152,24 @@ final class IssueInsertViewController: UIViewController {
             $0.height.equalToSuperview().multipliedBy(0.43)
         }
         
-        view.addSubview(additionalInfoLabel)
-        additionalInfoLabel.snp.makeConstraints {
-            $0.top.equalTo(textView.snp.bottom)
+        view.addSubview(previewView)
+        previewView.snp.makeConstraints {
+            $0.top.equalTo(titleView.snp.bottom)
             $0.leading.trailing.equalToSuperview().inset(18)
-            $0.height.equalToSuperview().multipliedBy(0.07)
+            $0.height.equalToSuperview().multipliedBy(0.43)
         }
         
         view.addSubview(insertForm)
         insertForm.snp.makeConstraints {
-            $0.top.equalTo(additionalInfoLabel.snp.bottom)
             $0.bottom.equalTo(view.safeAreaLayoutGuide).inset(10)
             $0.leading.trailing.equalToSuperview().inset(18)
+        }
+        
+        view.addSubview(additionalInfoLabel)
+        additionalInfoLabel.snp.makeConstraints {
+            $0.bottom.equalTo(insertForm.snp.top)
+            $0.leading.trailing.equalToSuperview().inset(18)
+            $0.height.equalToSuperview().multipliedBy(0.07)
         }
     }
     
@@ -149,6 +177,7 @@ final class IssueInsertViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: saveButton)
         navigationItem.titleView = segmentView
+        view.backgroundColor = .systemBackground
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

@@ -14,6 +14,7 @@ final class IssueInsertViewModel: BasicViewModel {
         let titleUpdated = Observable<String>()
         let bodyUpdated = Observable<String>()
         let closingViewRequested = Observable<Bool>()
+        let segmentIndexSelected = Observable<Int>()
     }
     
     struct Output {
@@ -23,6 +24,7 @@ final class IssueInsertViewModel: BasicViewModel {
         let updatedTitle = Observable<String>()
         let updatedBody = Observable<String>()
         let issueInsertResult = Observable<Bool>()
+        let markdownPreview = Observable<Bool>()
     }
     
     let input = Input()
@@ -86,6 +88,11 @@ final class IssueInsertViewModel: BasicViewModel {
         input.closingViewRequested.bind { [weak self] isReqeusted in
             guard isReqeusted == true else { return }
             self?.navigation?.goBackToIssueList()
+        }
+        
+        input.segmentIndexSelected.bind { [weak self] index in
+            
+            self?.output.markdownPreview.value =  index == 1 ? true : false
         }
     }
     

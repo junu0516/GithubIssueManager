@@ -47,6 +47,7 @@
 		B5714E1D2865AF5B00EB1A54 /* IssueInsertForm.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5714E1C2865AF5B00EB1A54 /* IssueInsertForm.swift */; };
 		B5714E1F2866F83B00EB1A54 /* IssueInsertViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5714E1E2866F83B00EB1A54 /* IssueInsertViewModel.swift */; };
 		B5714E212866F91300EB1A54 /* IssueInsertRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5714E202866F91300EB1A54 /* IssueInsertRepository.swift */; };
+		B58BF6CD287B164B0064A483 /* UISegmentedControl+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58BF6CC287B164B0064A483 /* UISegmentedControl+Extension.swift */; };
 		B5B7E7BC285E12630077E97D /* AuthRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BB285E12630077E97D /* AuthRequest.swift */; };
 		B5B7E7BE285E16EC0077E97D /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */; };
 		B5BBCB272867005D00BA918E /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5BBCB262867005D00BA918E /* Label.swift */; };
@@ -162,6 +163,7 @@
 		B5714E1C2865AF5B00EB1A54 /* IssueInsertForm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInsertForm.swift; sourceTree = "<group>"; };
 		B5714E1E2866F83B00EB1A54 /* IssueInsertViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInsertViewModel.swift; sourceTree = "<group>"; };
 		B5714E202866F91300EB1A54 /* IssueInsertRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueInsertRepository.swift; sourceTree = "<group>"; };
+		B58BF6CC287B164B0064A483 /* UISegmentedControl+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UISegmentedControl+Extension.swift"; sourceTree = "<group>"; };
 		B5B7E7BB285E12630077E97D /* AuthRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequest.swift; sourceTree = "<group>"; };
 		B5B7E7BD285E16EC0077E97D /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		B5BBCB262867005D00BA918E /* Label.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Label.swift; sourceTree = "<group>"; };
@@ -390,6 +392,7 @@
 				B5D4807C2861DF9F0069D16B /* UIColor+Extension.swift */,
 				B5BBCB5B2869C19400BA918E /* String+Extension.swift */,
 				B5BBCB462868CB3000BA918E /* UITextField+Extension.swift */,
+				B58BF6CC287B164B0064A483 /* UISegmentedControl+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -873,6 +876,7 @@
 				B53CFC94285C4CAA00C81EE3 /* CoordinatorFactory.swift in Sources */,
 				B5BBCB522869A76A00BA918E /* LabelListTableViewCell.swift in Sources */,
 				B5BBCB372867487F00BA918E /* AdditionalInfoTableViewCell.swift in Sources */,
+				B58BF6CD287B164B0064A483 /* UISegmentedControl+Extension.swift in Sources */,
 				B53CFC5F285C23FB00C81EE3 /* SceneDelegate.swift in Sources */,
 				B5714E212866F91300EB1A54 /* IssueInsertRepository.swift in Sources */,
 				B5D48091286337E30069D16B /* MockNetworkManager.swift in Sources */,
