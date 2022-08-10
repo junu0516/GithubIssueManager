@@ -11,6 +11,7 @@ final class IssueListViewController: UIViewController {
         tableView.separatorColor = .lightGray
         tableView.register(IssueListTableViewCell.self, forCellReuseIdentifier: IssueListTableViewCell.identifier)
         tableView.dataSource = issueDataSource
+        tableView.delegate = self
         return tableView
     }()
     private let issueDataSource = TableViewDataSource<IssueListTableViewCell,IssueListTableViewCellModel>.create()
@@ -113,5 +114,12 @@ extension TableViewDataSource where Model == IssueListTableViewCellModel,
         return TableViewDataSource(models: models) { cell, model in
             cell.bind(to: model)
         }
+    }
+}
+
+extension IssueListViewController: UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel?.input.issueIndexSelected.value = indexPath.row
     }
 }

@@ -6,6 +6,7 @@ protocol IssueNavigation: AnyObject {
     func showInfoSelectView(models: [TitleValuePossessible], saveOperation: @escaping ([Int]) -> Void)
     func closeSelectView()
     func goBackToIssueList()
+    func moveToIssueDetail(issueIndex: Int)
 }
 
 final class IssueCoordinator: Coordinator {
@@ -47,5 +48,9 @@ extension IssueCoordinator: IssueNavigation {
     
     func goBackToIssueList() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func moveToIssueDetail(issueIndex: Int) {
+        Log.debug("index number: \(issueIndex)")
     }
 }
