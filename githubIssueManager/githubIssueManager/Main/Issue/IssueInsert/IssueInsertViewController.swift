@@ -27,10 +27,11 @@ final class IssueInsertViewController: UIViewController {
     
     private let previewView: UITextView = {
         let textView = UITextView()
-        textView.backgroundColor = .darkGray
         textView.textColor = .black
         textView.isHidden = true
         textView.isEditable = false
+        textView.layer.borderColor = UIColor.lightGray.cgColor
+        textView.layer.borderWidth = 0.5
         return textView
     }()
     
@@ -112,8 +113,9 @@ final class IssueInsertViewController: UIViewController {
         }
         
         viewModel?.output.markdownPreview.bind { [weak self] previewFlag in
-            self?.textView.isHidden = previewFlag
-            self?.previewView.isHidden = !previewFlag
+            guard let self = self else { return }
+            self.textView.isHidden = previewFlag
+            self.previewView.isHidden = !previewFlag
         }
         
         saveButton.tapped { [weak self] in
@@ -151,7 +153,7 @@ final class IssueInsertViewController: UIViewController {
         }
         
         view.addSubview(previewView)
-        textView.snp.makeConstraints {
+        previewView.snp.makeConstraints {
             $0.top.equalTo(titleView.snp.bottom)
             $0.leading.trailing.equalToSuperview().inset(18)
             $0.height.equalToSuperview().multipliedBy(0.43)
@@ -175,6 +177,7 @@ final class IssueInsertViewController: UIViewController {
         navigationController?.navigationBar.prefersLargeTitles = false
         navigationItem.rightBarButtonItem = UIBarButtonItem(customView: saveButton)
         navigationItem.titleView = segmentView
+        view.backgroundColor = .systemBackground
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
