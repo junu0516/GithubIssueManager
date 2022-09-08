@@ -51,7 +51,7 @@ final class IssueInsertViewModel: BasicViewModel {
         input.milestoneFieldTapped.bind { [weak self] isTapped in
             guard isTapped == true else { return }
             let milestones = self?.input.milestones.value ?? []
-            self?.navigation?.showInfoSelectView(models: milestones) { selectedIndexList in
+            self?.navigation?.showInfoSelectView(models: milestones, allowsMultipleSelection: false) { selectedIndexList in
                 self?.saveSelectedInfo(infoType: .milestone, selectedIndexList: selectedIndexList)
             }
         }
@@ -59,7 +59,7 @@ final class IssueInsertViewModel: BasicViewModel {
         input.labelFieldTapped.bind { [weak self] isTapped in
             guard isTapped == true else { return }
             let labels = self?.input.labels.value ?? []
-            self?.navigation?.showInfoSelectView(models: labels) { selectedIndexList in
+            self?.navigation?.showInfoSelectView(models: labels, allowsMultipleSelection: true) { selectedIndexList in
                 self?.saveSelectedInfo(infoType: .label, selectedIndexList: selectedIndexList)
             }
         }
@@ -67,7 +67,7 @@ final class IssueInsertViewModel: BasicViewModel {
         input.assigneeFieldTapped.bind { [weak self] isTapped in
             guard isTapped == true else { return }
             let assignees = self?.input.assignees.value ?? []
-            self?.navigation?.showInfoSelectView(models: assignees) { selectedIndexList in
+            self?.navigation?.showInfoSelectView(models: assignees, allowsMultipleSelection: true) { selectedIndexList in
                 self?.saveSelectedInfo(infoType: .assignee, selectedIndexList: selectedIndexList)
             }
         }

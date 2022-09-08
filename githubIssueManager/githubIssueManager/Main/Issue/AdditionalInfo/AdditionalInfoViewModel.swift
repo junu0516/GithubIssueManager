@@ -14,16 +14,19 @@ final class AdditionalInfoViewModel: BasicViewModel {
     
     let input = Input()
     let output = Output()
+    let allowsMultipleSelection: Bool
     
     private weak var navigation: IssueNavigation?
     private let saveOperation: ([Int]) -> Void
     
     init(titles: [TitleValuePossessible],
          navigation: IssueNavigation? = nil,
+         allowsMultipleSelection: Bool,
          saveOperation: @escaping ([Int]) -> Void) {
         
         self.navigation = navigation
         self.saveOperation = saveOperation
+        self.allowsMultipleSelection = allowsMultipleSelection
         bind(titles: titles)
     }
     
@@ -36,9 +39,10 @@ final class AdditionalInfoViewModel: BasicViewModel {
         }
         
         input.saveButtonTapped.bind { [weak self] isTapped in
-            guard isTapped == true else { return }
-            self?.navigation?.closeSelectView()
-            self?.saveOperation(self?.filterSelectedIndex() ?? [])
+            guard isTapped == true,
+                  let self = self else { return }
+            self.navigation?.closeSelectView()
+            self.saveOperation(self.filterSelectedIndex())
         }
         
         input.cancelButtonTapped.bind { [weak self] isTapped in
@@ -54,6 +58,6 @@ final class AdditionalInfoViewModel: BasicViewModel {
                              .filter { (_, viewModel) -> Bool in
                                  viewModel.output.isSelected.value ?? false
                              }
-                             .map { $0.offset}
+                             .map { $0.offset }
     }
 }

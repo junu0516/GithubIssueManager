@@ -3,7 +3,7 @@ import UIKit
 protocol IssueNavigation: AnyObject {
     
     func moveToIssueInsert()
-    func showInfoSelectView(models: [TitleValuePossessible], saveOperation: @escaping ([Int]) -> Void)
+    func showInfoSelectView(models: [TitleValuePossessible], allowsMultipleSelection: Bool, saveOperation: @escaping ([Int]) -> Void)
     func closeSelectView()
     func goBackToIssueList()
     func moveToIssueDetail(issueIndex: Int)
@@ -35,8 +35,17 @@ extension IssueCoordinator: IssueNavigation {
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
-    func showInfoSelectView(models: [TitleValuePossessible], saveOperation: @escaping ([Int]) -> Void) {
-        let viewModel = AdditionalInfoViewModel(titles: models.map { $0 }, navigation: self, saveOperation: saveOperation)
+    func showInfoSelectView(
+        models: [TitleValuePossessible],
+        allowsMultipleSelection: Bool,
+        saveOperation: @escaping ([Int]) -> Void) {
+            
+        let viewModel = AdditionalInfoViewModel(
+            titles: models,
+            navigation: self,
+            allowsMultipleSelection: allowsMultipleSelection,
+            saveOperation: saveOperation
+        )
         let viewController = AdditionalInfoViewController(viewModel: viewModel)
         let childNavigation = UINavigationController(rootViewController: viewController)
         navigationController?.present(childNavigation, animated: true)
