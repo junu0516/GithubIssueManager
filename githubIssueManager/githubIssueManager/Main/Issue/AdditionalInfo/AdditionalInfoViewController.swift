@@ -42,18 +42,21 @@ final class AdditionalInfoViewController: UIViewController {
     }
     
     private func bind() {
+        guard let viewModel = viewModel else { return }
         
-        viewModel?.output.infoViewModels.bind { [weak self] models in
+        infoTableView.allowsMultipleSelection = viewModel.allowsMultipleSelection
+
+        viewModel.output.infoViewModels.bind { [weak self] models in
             self?.additionalInfoDataSource.items = models
             self?.infoTableView.reloadData()
         }
         
-        saveButton.tapped { [weak self] in
-            self?.viewModel?.input.saveButtonTapped.value = true
+        saveButton.tapped {
+            viewModel.input.saveButtonTapped.value = true
         }
         
-        cancelButton.tapped { [weak self] in
-            self?.viewModel?.input.cancelButtonTapped.value = true
+        cancelButton.tapped {
+            viewModel.input.cancelButtonTapped.value = true
         }
     }
     

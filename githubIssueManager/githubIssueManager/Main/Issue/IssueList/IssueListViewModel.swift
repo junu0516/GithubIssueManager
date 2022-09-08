@@ -6,6 +6,8 @@ final class IssueListViewModel: BasicViewModel {
         let issueListRequested = Observable<Bool>()
         let issues = Observable<[Issue]>()
         let addButtonTapped = Observable<Bool>()
+        
+        let issueIndexSelected = Observable<Int>()
     }
     
     struct Output {
@@ -37,6 +39,10 @@ final class IssueListViewModel: BasicViewModel {
         input.addButtonTapped.bind { [weak self] isTapped in
             guard isTapped == true else { return }
             self?.navigation?.moveToIssueInsert()
+        }
+        
+        input.issueIndexSelected.bind { [weak self] indexSelected in
+            self?.navigation?.moveToIssueDetail(issueIndex: indexSelected)
         }
     }
     
